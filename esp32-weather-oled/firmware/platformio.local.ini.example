@@ -1,0 +1,7 @@
+; 复制成 platformio.local.ini 后才会被 platformio.ini 读取（见 README「Windows 编译报错」）。
+;
+; 只在 g++ 命令行过长（报 "CreateProcess: No such file or directory"）时才需要：
+;   cmd /c mklink /J C:\pio C:\Users\<用户名>\.platformio
+
+[platformio]
+core_dir = C:/pio

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="940" viewBox="0 0 800 940"
+     font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif">
+  <rect width="800" height="940" fill="#f4f6fb"/>
+  <circle cx="762" cy="42" r="108" fill="#e3eaf8" opacity="0.7"/>
+  <circle cx="20" cy="900" r="78" fill="#e3eaf8" opacity="0.55"/>
+
+  <text x="40" y="46" font-size="23" font-weight="700" fill="#0f172a">界面预览 · 128×64 上的 Flappy Bird</text>
+  <text x="40" y="68" font-size="11.5" fill="#64748b">READY / PLAYING / GAME OVER · 几何按 game.cpp 的坐标放大 3 倍 · 真实屏幕只有黑白两色</text>
+
+  <rect x="560" y="27" width="200" height="32" rx="16" fill="#ffffff" stroke="#dbe3f0"/>
+  <circle cx="575" cy="43" r="3.4" fill="#16a34a"/>
+  <text x="584" y="47" font-size="10.5" font-weight="700" fill="#15803d">30 fps · 1 键 · 0 网络</text>
+
+  <rect x="40" y="100" width="404" height="212" rx="12" fill="#1e293b" stroke="#0b1220"/>
+    <circle cx="428" cy="112" r="3" fill="#f59e0b" opacity="0.9"/>
+    <g transform="translate(50,110) scale(3)" shape-rendering="crispEdges"><rect width="128" height="64" fill="#05080f"/>
+    <g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="6" y="24" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="30" y="30" width="3" height="1"/><rect x="44" y="20" width="1" height="1"/><rect x="58" y="36" width="1" height="1"/><rect x="70" y="10" width="1" height="1"/><rect x="82" y="50" width="1" height="1"/><rect x="96" y="26" width="3" height="1"/><rect x="108" y="14" width="1" height="1"/><rect x="118" y="42" width="1" height="1"/><rect x="12" y="54" width="1" height="1"/><rect x="64" y="52" width="1" height="1"/><rect x="102" y="34" width="1" height="1"/><rect x="124" y="20" width="1" height="1"/></g><g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="0" y="59" width="128" height="1"/><rect x="0" y="61" width="6" height="1"/><rect x="6" y="63" width="6" height="1"/><rect x="12" y="61" width="6" height="1"/><rect x="18" y="63" width="6" height="1"/><rect x="24" y="61" width="6" height="1"/><rect x="30" y="63" width="6" height="1"/><rect x="36" y="61" width="6" height="1"/><rect x="42" y="63" width="6" height="1"/><rect x="48" y="61" width="6" height="1"/><rect x="54" y="63" width="6" height="1"/><rect x="60" y="61" width="6" height="1"/><rect x="66" y="63" width="6" height="1"/><rect x="72" y="61" width="6" height="1"/><rect x="78" y="63" width="6" height="1"/><rect x="84" y="61" width="6" height="1"/><rect x="90" y="63" width="6" height="1"/><rect x="96" y="61" width="6" height="1"/><rect x="102" y="63" width="6" height="1"/><rect x="108" y="61" width="6" height="1"/><rect x="114" y="63" width="6" height="1"/><rect x="120" y="61" width="6" height="1"/><rect x="126" y="63" width="6" height="1"/></g>
+    <text x="64.00" y="18.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="20" font-weight="400" fill="#e8f1ff" text-anchor="middle">FLAPPY</text>
+    <text x="64.00" y="35.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="20" font-weight="400" fill="#e8f1ff" text-anchor="middle">BIRD</text>
+    <g transform="translate(14,36)">
+      <ellipse cx="6" cy="4" rx="5.6" ry="4" fill="#e8f1ff"/>
+      <circle cx="8.5" cy="2.5" r="1" fill="#05080f"/>
+      <path d="M10.5 3.4 L13 4.2 L10.5 5.2 Z" fill="#e8f1ff"/>
+      <path d="M2 4.6 q3 2.8 6 1" fill="none" stroke="#05080f" stroke-width="0.8"/>
+    </g>
+    <text x="64.00" y="47.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="10" font-weight="400" fill="#e8f1ff" text-anchor="middle">PRESS BOOT</text>
+    <text x="64.00" y="58.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="10" font-weight="400" fill="#e8f1ff" text-anchor="middle">BEST 0</text></g>
+    <text x="480" y="130" font-size="19" font-weight="700" fill="#0f172a">READY</text>
+    <text x="480" y="152" font-size="11" fill="#64748b">标题页 · 等第一次按键</text>
+    <circle cx="485" cy="178" r="2" fill="#f59e0b"/>
+    <text x="496" y="182" font-size="10.5" fill="#475569">FLAPPY BIRD 标题 + 小鸟上下浮动</text>
+    <circle cx="485" cy="202" r="2" fill="#f59e0b"/>
+    <text x="496" y="206" font-size="10.5" fill="#475569">BEST 从 NVS 读取，断电、重烧都不丢</text>
+    <circle cx="485" cy="226" r="2" fill="#f59e0b"/>
+    <text x="496" y="230" font-size="10.5" fill="#475569">按 BOOT：开始，并立刻扇一次翅膀</text>
+
+  <rect x="40" y="340" width="404" height="212" rx="12" fill="#1e293b" stroke="#0b1220"/>
+    <circle cx="428" cy="352" r="3" fill="#2563eb" opacity="0.9"/>
+    <g transform="translate(50,350) scale(3)" shape-rendering="crispEdges"><rect width="128" height="64" fill="#05080f"/>
+    <g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="6" y="24" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="30" y="30" width="3" height="1"/><rect x="44" y="20" width="1" height="1"/><rect x="58" y="36" width="1" height="1"/><rect x="70" y="10" width="1" height="1"/><rect x="82" y="50" width="1" height="1"/><rect x="96" y="26" width="3" height="1"/><rect x="108" y="14" width="1" height="1"/><rect x="118" y="42" width="1" height="1"/><rect x="12" y="54" width="1" height="1"/><rect x="64" y="52" width="1" height="1"/><rect x="102" y="34" width="1" height="1"/><rect x="124" y="20" width="1" height="1"/></g><g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="0" y="59" width="128" height="1"/><rect x="0" y="61" width="6" height="1"/><rect x="6" y="63" width="6" height="1"/><rect x="12" y="61" width="6" height="1"/><rect x="18" y="63" width="6" height="1"/><rect x="24" y="61" width="6" height="1"/><rect x="30" y="63" width="6" height="1"/><rect x="36" y="61" width="6" height="1"/><rect x="42" y="63" width="6" height="1"/><rect x="48" y="61" width="6" height="1"/><rect x="54" y="63" width="6" height="1"/><rect x="60" y="61" width="6" height="1"/><rect x="66" y="63" width="6" height="1"/><rect x="72" y="61" width="6" height="1"/><rect x="78" y="63" width="6" height="1"/><rect x="84" y="61" width="6" height="1"/><rect x="90" y="63" width="6" height="1"/><rect x="96" y="61" width="6" height="1"/><rect x="102" y="63" width="6" height="1"/><rect x="108" y="61" width="6" height="1"/><rect x="114" y="63" width="6" height="1"/><rect x="120" y="61" width="6" height="1"/><rect x="126" y="63" width="6" height="1"/></g>
+    <g fill="none" stroke="#e8f1ff" stroke-width="1.2">
+      <rect x="52" y="0" width="12" height="18"/>
+      <rect x="52" y="41" width="12" height="18"/>
+    </g>
+    <g fill="#e8f1ff">
+      <rect x="50" y="14" width="16" height="4"/>
+      <rect x="50" y="41" width="16" height="4"/>
+    </g>
+    <g fill="none" stroke="#e8f1ff" stroke-width="1.2">
+      <rect x="106" y="0" width="12" height="28"/>
+      <rect x="106" y="51" width="12" height="8"/>
+    </g>
+    <g fill="#e8f1ff">
+      <rect x="104" y="24" width="16" height="4"/>
+      <rect x="104" y="51" width="16" height="4"/>
+    </g>
+    <text x="58.00" y="14" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="20" font-weight="700" fill="#e8f1ff" stroke="#05080f" stroke-width="2" paint-order="stroke">7</text>
+    <g transform="translate(24,27)">
+      <ellipse cx="6" cy="4" rx="5.6" ry="4" fill="#e8f1ff"/>
+      <circle cx="8.5" cy="2.5" r="1" fill="#05080f"/>
+      <path d="M10.5 3.4 L13 4.2 L10.5 5.2 Z" fill="#e8f1ff"/>
+      <path d="M2 4.6 q3 2.8 6 1" fill="none" stroke="#05080f" stroke-width="0.8"/>
+    </g></g>
+    <text x="480" y="370" font-size="19" font-weight="700" fill="#0f172a">PLAYING</text>
+    <text x="480" y="392" font-size="11" fill="#64748b">30Hz 逻辑 · 固定步长帧循环</text>
+    <circle cx="485" cy="418" r="2" fill="#2563eb"/>
+    <text x="496" y="422" font-size="10.5" fill="#475569">重力 0.32，扇翅膀 -2.70，水管 1.15 px/帧</text>
+    <circle cx="485" cy="442" r="2" fill="#2563eb"/>
+    <text x="496" y="446" font-size="10.5" fill="#475569">过一根管 +1 分；数字用黑边描字，压管也看得清</text>
+    <circle cx="485" cy="466" r="2" fill="#2563eb"/>
+    <text x="496" y="470" font-size="10.5" fill="#475569">碰撞盒内缩 1px：碰管 / 落地 → DYING</text>
+
+  <rect x="40" y="580" width="404" height="212" rx="12" fill="#1e293b" stroke="#0b1220"/>
+    <circle cx="428" cy="592" r="3" fill="#16a34a" opacity="0.9"/>
+    <g transform="translate(50,590) scale(3)" shape-rendering="crispEdges"><rect width="128" height="64" fill="#05080f"/>
+    <g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="6" y="24" width="1" height="1"/><rect x="18" y="12" width="1" height="1"/><rect x="30" y="30" width="3" height="1"/><rect x="44" y="20" width="1" height="1"/><rect x="58" y="36" width="1" height="1"/><rect x="70" y="10" width="1" height="1"/><rect x="82" y="50" width="1" height="1"/><rect x="96" y="26" width="3" height="1"/><rect x="108" y="14" width="1" height="1"/><rect x="118" y="42" width="1" height="1"/><rect x="12" y="54" width="1" height="1"/><rect x="64" y="52" width="1" height="1"/><rect x="102" y="34" width="1" height="1"/><rect x="124" y="20" width="1" height="1"/></g><g fill="#e8f1ff" shape-rendering="crispEdges"><rect x="0" y="59" width="128" height="1"/><rect x="0" y="61" width="6" height="1"/><rect x="6" y="63" width="6" height="1"/><rect x="12" y="61" width="6" height="1"/><rect x="18" y="63" width="6" height="1"/><rect x="24" y="61" width="6" height="1"/><rect x="30" y="63" width="6" height="1"/><rect x="36" y="61" width="6" height="1"/><rect x="42" y="63" width="6" height="1"/><rect x="48" y="61" width="6" height="1"/><rect x="54" y="63" width="6" height="1"/><rect x="60" y="61" width="6" height="1"/><rect x="66" y="63" width="6" height="1"/><rect x="72" y="61" width="6" height="1"/><rect x="78" y="63" width="6" height="1"/><rect x="84" y="61" width="6" height="1"/><rect x="90" y="63" width="6" height="1"/><rect x="96" y="61" width="6" height="1"/><rect x="102" y="63" width="6" height="1"/><rect x="108" y="61" width="6" height="1"/><rect x="114" y="63" width="6" height="1"/><rect x="120" y="61" width="6" height="1"/><rect x="126" y="63" width="6" height="1"/></g>
+    <g fill="none" stroke="#e8f1ff" stroke-width="1.2">
+      <rect x="52" y="0" width="12" height="18"/>
+      <rect x="52" y="41" width="12" height="18"/>
+    </g>
+    <g fill="#e8f1ff">
+      <rect x="50" y="14" width="16" height="4"/>
+      <rect x="50" y="41" width="16" height="4"/>
+    </g>
+    <g fill="none" stroke="#e8f1ff" stroke-width="1.2">
+      <rect x="106" y="0" width="12" height="28"/>
+      <rect x="106" y="51" width="12" height="8"/>
+    </g>
+    <g fill="#e8f1ff">
+      <rect x="104" y="24" width="16" height="4"/>
+      <rect x="104" y="51" width="16" height="4"/>
+    </g>
+    <g transform="translate(24,51)">
+      <ellipse cx="6" cy="4" rx="5.6" ry="4" fill="#e8f1ff"/>
+      <circle cx="8.5" cy="2.5" r="1" fill="#05080f"/>
+      <path d="M10.5 3.4 L13 4.2 L10.5 5.2 Z" fill="#e8f1ff"/>
+      <path d="M2 4.6 q3 2.8 6 1" fill="none" stroke="#05080f" stroke-width="0.8"/>
+    </g>
+    <rect x="8" y="8" width="112" height="42" rx="5" fill="#e8f1ff"/>
+    <text x="37.00" y="17.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="10" font-weight="400" fill="#05080f">GAME OVER</text>
+    <text x="52.00" y="32.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="20" font-weight="700" fill="#05080f">12</text>
+    <text x="43.00" y="41.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="10" font-weight="400" fill="#05080f">BEST 20</text>
+    <text x="28.00" y="49.00" font-family="'DejaVu Sans Mono','Consolas','Courier New',monospace" font-size="10" font-weight="400" fill="#05080f">BOOT = RETRY</text></g>
+    <text x="480" y="610" font-size="19" font-weight="700" fill="#0f172a">GAME OVER</text>
+    <text x="480" y="632" font-size="11" fill="#64748b">结算面板 · 新纪录写回 NVS</text>
+    <circle cx="485" cy="658" r="2" fill="#16a34a"/>
+    <text x="496" y="662" font-size="10.5" fill="#475569">反色闪 0.24s + 坠落 0.7s，期间输入锁定</text>
+    <circle cx="485" cy="682" r="2" fill="#16a34a"/>
+    <text x="496" y="686" font-size="10.5" fill="#475569">面板显示本局分数 / BEST / NEW!</text>
+    <circle cx="485" cy="706" r="2" fill="#16a34a"/>
+    <text x="496" y="710" font-size="10.5" fill="#475569">BOOT = RETRY；350ms 锁定期防死亡连按</text>
+
+  <text x="40" y="812" font-size="12.5" font-weight="700" fill="#0f172a">状态机</text>
+    <rect x="40" y="824" width="152" height="50" rx="10" fill="#ffffff" stroke="#f59e0b" stroke-width="1.4"/><text x="116" y="846" font-size="12" font-weight="700" fill="#f59e0b" text-anchor="middle">READY</text><text x="116" y="862" font-size="8.5" fill="#64748b" text-anchor="middle">按 BOOT 开始</text>
+    <rect x="226" y="824" width="152" height="50" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.4"/><text x="302" y="846" font-size="12" font-weight="700" fill="#2563eb" text-anchor="middle">PLAYING</text><text x="302" y="862" font-size="8.5" fill="#64748b" text-anchor="middle">按 BOOT 扇翅膀</text>
+    <rect x="412" y="824" width="152" height="50" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="1.4"/><text x="488" y="846" font-size="12" font-weight="700" fill="#dc2626" text-anchor="middle">DYING</text><text x="488" y="862" font-size="8.5" fill="#64748b" text-anchor="middle">坠落 0.7s · 闪屏 0.24s</text>
+    <rect x="598" y="824" width="152" height="50" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.4"/><text x="674" y="846" font-size="12" font-weight="700" fill="#16a34a" text-anchor="middle">GAME OVER</text><text x="674" y="862" font-size="8.5" fill="#64748b" text-anchor="middle">按 BOOT 重开</text>
+    <path d="M198 849 h20 m-5 -4 l5 4 l-5 4" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M384 849 h20 m-5 -4 l5 4 l-5 4" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M570 849 h20 m-5 -4 l5 4 l-5 4" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="208" y="819" font-size="7.5" fill="#94a3b8" text-anchor="middle">开始</text>
+    <text x="394" y="819" font-size="7.5" fill="#94a3b8" text-anchor="middle">撞管 / 落地</text>
+    <text x="580" y="819" font-size="7.5" fill="#94a3b8" text-anchor="middle">动画结束</text>
+    <path d="M674 874 v18 H302 v-18" fill="none" stroke="#16a34a" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M302 879 l-4 -6 h8 z" fill="#16a34a"/>
+    <text x="488" y="903" font-size="8" fill="#15803d" text-anchor="middle">重开（直接进入 PLAYING，不经过标题页）</text>
+
+  <text x="40" y="928" font-size="9" fill="#94a3b8">示意图：字体用等宽字体近似 Adafruit 5×7，像素几何与固件一致</text>
+  <text x="760" y="928" font-size="9" fill="#94a3b8" text-anchor="end">esp32-flappy-bird · docs/screens.svg</text>
+</svg>

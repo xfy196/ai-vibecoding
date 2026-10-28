@@ -152,7 +152,7 @@ void uiBoot() {
   display.setTextSize(1);
   textCenter(30, "C L O C K");
   rule(40);
-  textCenter(45, "ESP32-C3 + SSD1306");
+  textCenter(45, BOARD_BOOT_TEXT);
   textCenter(55, "SNTP / deep sleep");
   display.display();
 }

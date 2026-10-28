@@ -6,9 +6,46 @@
  */
 #pragma once
 
+// ================= 板型：换板子只改这里 + platformio.ini 的编译环境 =================
+// platformio.ini 里两个环境各自定义一个宏：
+//   pio run -e esp32c3     -> BOARD_ESP32_C3          ESP32-C3 SuperMini
+//   pio run -e esp32dev    -> BOARD_ESP32_DEVKIT_V1   ESP32 DevKit V1 (WROOM-32, 30 pin)
+// 没有定义任何宏（例如在 Arduino IDE 里直接编译）时按 C3 处理。
+#if !defined(BOARD_ESP32_DEVKIT_V1)
+#define BOARD_ESP32_C3 1
+#endif
+
+#if defined(BOARD_ESP32_DEVKIT_V1)
+
+// ---------------- ESP32 DevKit V1 / WROOM-32 ----------------
+#define BOARD_TITLE     "ESP32 DevKit V1"
+#define BOARD_SUBTITLE  "WROOM-32 30-pin 2.4GHz"
+#define BOARD_BOOT_TEXT "ESP32-WROOM + SSD1306"
+
+#define I2C_SDA_PIN    21     // OLED SDA -> GPIO21（ESP32 默认 SDA）
+#define I2C_SCL_PIN    22     // OLED SCL -> GPIO22（ESP32 默认 SCL）
+#define BTN_PIN         4     // 按钮 -> GPIO4（RTC IO，可从深睡唤醒）
+#define BTN_WAKE_EXT0   1     // 经典 ESP32 没有 GPIO 唤醒 API，用 ext0 单脚唤醒
+#define LED_PIN         2     // 板载 LED 在 GPIO2，高电平点亮
+#define LED_ACTIVE_LOW  0
+
+#else
+
+// ---------------- ESP32-C3 SuperMini ----------------
+#define BOARD_TITLE     "ESP32-C3"
+#define BOARD_SUBTITLE  "SuperMini RISC-V 2.4GHz"
+#define BOARD_BOOT_TEXT "ESP32-C3 + SSD1306"
+
+#define I2C_SDA_PIN     4     // OLED SDA -> IO4
+#define I2C_SCL_PIN     5     // OLED SCL -> IO5
+#define BTN_PIN         3     // 按钮 -> IO3（GPIO 深睡唤醒，低电平）
+#define BTN_WAKE_EXT0   0     // C3 用 esp_deep_sleep_enable_gpio_wakeup()
+#define LED_PIN         8     // 板载 LED 在 IO8，低电平点亮
+#define LED_ACTIVE_LOW  1
+
+#endif
+
 // ================= OLED（SSD1306 128x64，I2C 四线） =================
-#define I2C_SDA_PIN    4      // OLED SDA -> IO4
-#define I2C_SCL_PIN    5      // OLED SCL -> IO5
 #define OLED_I2C_ADDR  0x3C   // 常见 0x3C，部分模块是 0x3D（代码会自动探测）
 #define SCREEN_W       128
 #define SCREEN_H       64
@@ -56,10 +93,12 @@
 #define CLOCK_GHOST_SEGMENTS 0
 
 // ================= 按键（可选） =================
-// ESP32-C3 只有 GPIO0–GPIO5 能从深睡唤醒，而 IO4/IO5 已被 I2C 占用。
-// 按钮一端接 IO3，另一端接 GND；不接按钮也能正常当时钟用。
+// 按钮一端接 BTN_PIN，另一端接 GND；不接按钮也能正常当时钟用。
+//   ESP32-C3：只有 GPIO0–GPIO5 能从深睡唤醒，IO4/IO5 已被 I2C 占用，所以按钮放 IO3。
+//   ESP32   ：只有 RTC GPIO 能唤醒（0 / 2 / 4 / 12–15 / 25–27 / 32–39），
+//             21/22 已被 I2C 占用，所以按钮放 GPIO4。
+//             板载 BOOT 键就是 GPIO0，也能当唤醒键，但按住复位会进下载模式。
 #define BTN_ENABLED 1
-#define BTN_PIN     3
 #define BTN_LONG_MS 1200      // 短按 1.2s 内松手 = 立即校时
 #define BTN_PROVISION_MS 3000 // 按住 3s 以上 = 重新配网
 #define DIAG_HOLD_SEC 8       // 长按 1.2s 后诊断页停留时间
@@ -68,6 +107,5 @@
 #define PROVISION_TIMEOUT_MS (10UL * 60UL * 1000UL)  // 配网页最多开 10 分钟
 #define PROVISION_RETRY_SEC  300                     // 配网超时后睡 5 分钟再试
 
-// 板载 LED（SuperMini 是 IO8，低电平点亮），睡眠前务必关掉
-#define LED_PIN        8
-#define LED_ACTIVE_LOW 1
+// 板载 LED 的引脚 / 极性跟着板型走，见文件开头的板型区
+// （C3：IO8 低电平点亮；DevKit V1：GPIO2 高电平点亮）。睡眠前务必关掉。
