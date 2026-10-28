@@ -1,0 +1,265 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1240" viewBox="0 0 800 620"
+     font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif">
+
+  <!-- ==================== 背景 ==================== -->
+  <rect width="800" height="620" fill="#f4f6fb"/>
+  <circle cx="762" cy="42" r="108" fill="#e3eaf8" opacity="0.7"/>
+  <circle cx="18" cy="566" r="78" fill="#e3eaf8" opacity="0.55"/>
+
+  <!-- ==================== 标题 ==================== -->
+  <text x="40" y="46" font-size="23" font-weight="700" fill="#0f172a">ESP32-C3 SuperMini × 0.96″ OLED</text>
+  <text x="40" y="68" font-size="11.5" fill="#64748b">WiFi 扫描器接线 · SSD1306 128×64 · I2C 四线 · 3.3V 供电</text>
+
+  <rect x="556" y="27" width="204" height="32" rx="16" fill="#ffffff" stroke="#dbe3f0"/>
+  <circle cx="573" cy="43" r="3.4" fill="#2563eb"/>
+  <text x="582" y="47" font-size="10.5" font-weight="700" fill="#1d4ed8">SDA  GPIO4</text>
+  <circle cx="668" cy="43" r="3.4" fill="#16a34a"/>
+  <text x="677" y="47" font-size="10.5" font-weight="700" fill="#15803d">SCL  GPIO5</text>
+
+  <!-- ==================== ESP32-C3 卡片 ==================== -->
+  <rect x="40" y="100" width="260" height="300" rx="16" fill="#1e293b" stroke="#0b1220" stroke-width="1.2"/>
+  <rect x="48" y="108" width="244" height="284" rx="11" fill="none" stroke="#334155"/>
+
+  <text x="60" y="134" font-size="15" font-weight="700" fill="#f8fafc">ESP32-C3</text>
+  <text x="60" y="150" font-size="9" fill="#94a3b8">SuperMini · RISC-V · 2.4GHz WiFi</text>
+
+  <!-- USB-C -->
+  <rect x="20" y="170" width="20" height="44" rx="4" fill="#94a3b8" stroke="#64748b"/>
+  <rect x="24" y="181" width="11" height="22" rx="2.5" fill="#475569"/>
+  <text x="18" y="228" font-size="7.5" fill="#94a3b8" text-anchor="middle">USB-C</text>
+
+  <!-- 板载天线 -->
+  <g stroke="#475569" stroke-width="2.2" fill="none" stroke-linecap="round">
+    <path d="M60 246 h26 v-10 h16 v10 h16 v-10 h16 v10 h16"/>
+  </g>
+  <text x="60" y="264" font-size="7.5" fill="#64748b">2.4G 天线</text>
+
+  <!-- 芯片 -->
+  <rect x="94" y="278" width="52" height="42" rx="5" fill="#243144" stroke="#3b4a63"/>
+  <rect x="106" y="288" width="28" height="22" rx="2" fill="#1b2534"/>
+  <text x="120" y="303" font-size="7" font-weight="700" fill="#4d5d78" text-anchor="middle">C3</text>
+
+  <!-- 电源灯 -->
+  <circle cx="268" cy="120" r="3" fill="#22c55e"/>
+  <circle cx="268" cy="120" r="6" fill="#22c55e" opacity="0.2"/>
+
+  <!-- BOOT -->
+  <rect x="94" y="352" width="34" height="13" rx="3" fill="#334155" stroke="#475569"/>
+  <text x="111" y="361.5" font-size="6" font-weight="600" fill="#cbd5e1" text-anchor="middle">BOOT</text>
+  <text x="136" y="361" font-size="7" fill="#94a3b8">= IO9 · 列表翻页</text>
+
+  <!-- 引脚（右缘） -->
+  <g>
+    <rect x="278" y="161" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="296" cy="170" r="2.6" fill="#111827"/>
+    <text x="270" y="174.5" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end">3V3</text>
+
+    <rect x="278" y="203" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="296" cy="212" r="2.6" fill="#111827"/>
+    <text x="270" y="216.5" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end">GND</text>
+
+    <rect x="278" y="245" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="296" cy="254" r="2.6" fill="#111827"/>
+    <text x="270" y="258.5" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end">IO4</text>
+
+    <rect x="278" y="287" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="296" cy="296" r="2.6" fill="#111827"/>
+    <text x="270" y="300.5" font-size="11.5" font-weight="600" fill="#e2e8f0" text-anchor="end">IO5</text>
+  </g>
+
+  <!-- ==================== OLED 卡片 ==================== -->
+  <rect x="520" y="100" width="240" height="300" rx="16" fill="#0b1220" stroke="#1e293b" stroke-width="1.2"/>
+
+  <text x="538" y="134" font-size="15" font-weight="700" fill="#f8fafc">OLED 0.96″</text>
+  <text x="538" y="150" font-size="9" fill="#94a3b8">SSD1306 · 128×64 · I2C 4 针</text>
+
+  <!-- 屏 -->
+  <rect x="556" y="160" width="184" height="98" rx="4" fill="#060b16" stroke="#2b3648"/>
+  <rect x="559" y="163" width="178" height="92" fill="#050a13"/>
+
+  <!-- 屏内 UI 缩略 -->
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
+    <text x="564" y="172" font-size="7" fill="#e2e8f0">WiFi 23</text>
+    <text x="733" y="172" font-size="7" fill="#93a4bd" text-anchor="end">-42 ch6</text>
+    <line x1="559" y1="175" x2="737" y2="175" stroke="#cbd5e1" stroke-width="0.9"/>
+
+    <!-- 选中行 -->
+    <rect x="559" y="176" width="174" height="14" fill="#e8eef7"/>
+    <g fill="#0b1220">
+      <rect x="563" y="185" width="3" height="3"/>
+      <rect x="567" y="183" width="3" height="5"/>
+      <rect x="571" y="181" width="3" height="7"/>
+      <rect x="575" y="179" width="3" height="9"/>
+    </g>
+    <text x="582" y="187" font-size="7.4" fill="#0b1220">ChinaNet-8F2A</text>
+    <text x="730" y="187" font-size="7.4" fill="#0b1220" text-anchor="end">-42</text>
+
+    <!-- 普通行 -->
+    <g font-size="7.4" fill="#dbe6f5">
+      <g fill="#dbe6f5">
+        <rect x="563" y="200" width="3" height="3"/>
+        <rect x="567" y="198" width="3" height="5"/>
+        <rect x="571" y="196" width="3" height="7"/>
+        <rect x="575" y="194" width="3" height="9"/>
+      </g>
+      <text x="582" y="202">TP-LINK_5G_EXT</text>
+      <text x="730" y="202" text-anchor="end">-48</text>
+
+      <g fill="#dbe6f5">
+        <rect x="563" y="215" width="3" height="3"/>
+        <rect x="567" y="213" width="3" height="5"/>
+        <rect x="571" y="211" width="3" height="7"/>
+        <rect x="575" y="209" width="3" height="9"/>
+      </g>
+      <text x="582" y="217">Xiaomi_AX3000</text>
+      <text x="730" y="217" text-anchor="end">-55</text>
+
+      <g fill="#dbe6f5">
+        <rect x="563" y="230" width="3" height="3"/>
+        <rect x="567" y="228" width="3" height="5"/>
+        <rect x="571" y="226" width="3" height="7"/>
+        <rect x="575" y="224" width="3" height="9"/>
+      </g>
+      <text x="582" y="232">CMCC-5G-9C21</text>
+      <text x="730" y="232" text-anchor="end">-61</text>
+
+      <g fill="#dbe6f5">
+        <rect x="563" y="245" width="3" height="3"/>
+        <rect x="567" y="243" width="3" height="5"/>
+        <rect x="571" y="241" width="3" height="7"/>
+        <rect x="575" y="239" width="3" height="9"/>
+      </g>
+      <text x="582" y="247">?_5G</text>
+      <text x="730" y="247" text-anchor="end">-63</text>
+    </g>
+
+    <!-- 滚动条 -->
+    <g fill="#cbd5e1">
+      <rect x="735" y="177" width="2" height="2"/>
+      <rect x="735" y="182" width="2" height="2"/>
+      <rect x="735" y="187" width="2" height="2"/>
+      <rect x="735" y="192" width="2" height="2"/>
+      <rect x="735" y="197" width="2" height="2"/>
+      <rect x="735" y="202" width="2" height="2"/>
+      <rect x="735" y="207" width="2" height="2"/>
+      <rect x="735" y="212" width="2" height="2"/>
+      <rect x="735" y="217" width="2" height="2"/>
+      <rect x="735" y="222" width="2" height="2"/>
+      <rect x="735" y="227" width="2" height="2"/>
+      <rect x="735" y="232" width="2" height="2"/>
+      <rect x="735" y="237" width="2" height="2"/>
+      <rect x="735" y="242" width="2" height="2"/>
+    </g>
+    <rect x="734" y="177" width="4" height="12" fill="#e8eef7"/>
+
+    <line x1="559" y1="250" x2="737" y2="250" stroke="#64748b" stroke-width="0.9"/>
+    <rect x="640" y="251" width="26" height="2" fill="#e8eef7"/>
+  </g>
+
+  <!-- 引脚（左缘） -->
+  <g>
+    <rect x="502" y="161" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="504" cy="170" r="2.6" fill="#0b1220"/>
+    <text x="532" y="174.5" font-size="11.5" font-weight="600" fill="#e2e8f0">VCC</text>
+
+    <rect x="502" y="203" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="504" cy="212" r="2.6" fill="#0b1220"/>
+    <text x="532" y="216.5" font-size="11.5" font-weight="600" fill="#e2e8f0">GND</text>
+
+    <rect x="502" y="245" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="504" cy="254" r="2.6" fill="#0b1220"/>
+    <text x="532" y="258.5" font-size="11.5" font-weight="600" fill="#e2e8f0">SDA</text>
+
+    <rect x="502" y="287" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="504" cy="296" r="2.6" fill="#0b1220"/>
+    <text x="532" y="300.5" font-size="11.5" font-weight="600" fill="#e2e8f0">SCL</text>
+  </g>
+
+  <text x="538" y="372" font-size="8.2" fill="#64748b">丝印 SDA 也可能是 SDI，SCL 也可能是 SCK</text>
+  <text x="538" y="386" font-size="8.2" fill="#64748b">7 针 SPI 版多出 D0/RES/DC/CS，接线不同</text>
+
+  <!-- ==================== 连线 ==================== -->
+  <g stroke-linecap="round">
+    <line x1="298" y1="170" x2="502" y2="170" stroke="#ef4444" stroke-width="3.6"/>
+    <line x1="298" y1="212" x2="502" y2="212" stroke="#334155" stroke-width="3.6"/>
+    <line x1="298" y1="254" x2="502" y2="254" stroke="#2563eb" stroke-width="3.6"/>
+    <line x1="298" y1="296" x2="502" y2="296" stroke="#16a34a" stroke-width="3.6"/>
+  </g>
+
+  <g font-size="10" font-weight="700" text-anchor="middle">
+    <rect x="352" y="158" width="96" height="24" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="400" y="174" fill="#b91c1c">3V3 → VCC</text>
+
+    <rect x="364" y="200" width="72" height="24" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="400" y="216" fill="#334155">GND</text>
+
+    <rect x="352" y="242" width="96" height="24" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="400" y="258" fill="#1d4ed8">IO4 → SDA</text>
+
+    <rect x="352" y="284" width="96" height="24" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="400" y="300" fill="#15803d">IO5 → SCL</text>
+  </g>
+
+  <!-- ==================== 底部信息卡 ==================== -->
+  <rect x="40" y="424" width="720" height="160" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+
+  <!-- 左：接线表 -->
+  <rect x="58" y="442" width="3" height="13" rx="1.5" fill="#2563eb"/>
+  <text x="70" y="453" font-size="12.5" font-weight="700" fill="#0f172a">接线表</text>
+
+  <g font-size="9" fill="#94a3b8" font-weight="600">
+    <text x="70" y="476">OLED</text>
+    <text x="158" y="476">ESP32-C3</text>
+    <text x="256" y="476">线色</text>
+  </g>
+
+  <g font-size="11">
+    <text x="70" y="500" fill="#0f172a" font-weight="600">VCC</text>
+    <text x="146" y="500" fill="#94a3b8">→</text>
+    <text x="166" y="500" fill="#b45309" font-weight="700">3V3</text>
+    <circle cx="262" cy="496" r="4" fill="#ef4444"/>
+    <text x="272" y="500" fill="#475569">红</text>
+
+    <text x="70" y="524" fill="#0f172a" font-weight="600">GND</text>
+    <text x="146" y="524" fill="#94a3b8">→</text>
+    <text x="166" y="524" fill="#334155" font-weight="700">GND</text>
+    <circle cx="262" cy="520" r="4" fill="#334155"/>
+    <text x="272" y="524" fill="#475569">黑</text>
+
+    <text x="70" y="548" fill="#0f172a" font-weight="600">SDA</text>
+    <text x="146" y="548" fill="#94a3b8">→</text>
+    <text x="166" y="548" fill="#1d4ed8" font-weight="700">GPIO4</text>
+    <circle cx="262" cy="544" r="4" fill="#2563eb"/>
+    <text x="272" y="548" fill="#475569">蓝</text>
+
+    <text x="70" y="572" fill="#0f172a" font-weight="600">SCL</text>
+    <text x="146" y="572" fill="#94a3b8">→</text>
+    <text x="166" y="572" fill="#15803d" font-weight="700">GPIO5</text>
+    <circle cx="262" cy="568" r="4" fill="#16a34a"/>
+    <text x="272" y="572" fill="#475569">绿</text>
+  </g>
+
+  <line x1="356" y1="442" x2="356" y2="566" stroke="#eef2f7"/>
+
+  <!-- 右：注意 -->
+  <text x="380" y="453" font-size="12.5" font-weight="700" fill="#0f172a">接线要点</text>
+
+  <g font-size="10.2" fill="#475569">
+    <g fill="#94a3b8">
+      <circle cx="386" cy="476" r="2"/>
+      <circle cx="386" cy="500" r="2"/>
+      <circle cx="386" cy="524" r="2"/>
+      <circle cx="386" cy="548" r="2"/>
+      <circle cx="386" cy="572" r="2"/>
+    </g>
+    <text x="396" y="480">VCC 必须接 <tspan font-weight="700" fill="#b91c1c">3V3</tspan>，不要接 5V，接错可能烧屏</text>
+    <text x="396" y="504">以板上丝印为准找脚，不要按位置数；I2C 地址常见 0x3C / 0x3D</text>
+    <text x="396" y="528">杜邦线建议 ≤20cm，SDA/SCL 远离电机、继电器等干扰源</text>
+    <text x="396" y="552">IO4/IO5 也是 JTAG 调试脚；当 I2C 用后不能再接 JTAG，不影响烧录</text>
+    <text x="396" y="576">IO9 是 BOOT 键（本项目当翻页键）；IO8 是板载 LED，IO2 是 strapping</text>
+  </g>
+
+  <!-- ==================== 页脚 ==================== -->
+  <text x="40" y="608" font-size="9" fill="#94a3b8">断电后接线 · 上电前复查 3V3 / GND</text>
+  <text x="760" y="608" font-size="9" fill="#94a3b8" text-anchor="end">esp32-wifi-scanner · docs/wiring.svg</text>
+</svg>
