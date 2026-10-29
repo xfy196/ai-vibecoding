@@ -1,0 +1,163 @@
+<template>
+<style>
+
+  @font-face {
+    font-family: "Zpix";
+    src: url("assets/fonts/zpix.woff2") format("woff2");
+    font-display: block;
+  }
+  #root {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #070613;
+    font-family: "Zpix", monospace;
+    -webkit-font-smoothing: none;
+    text-rendering: geometricPrecision;
+  }
+  .blk { position: absolute; }
+  .t { white-space: pre; }
+  .ch { white-space: pre; }
+  .spr { background-repeat: repeat-x; image-rendering: pixelated; }
+  .clip { position: absolute; inset: 0; }
+  .scan {
+    position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgba(4,3,12,0.22) 0px, rgba(4,3,12,0.22) 4px, rgba(4,3,12,0) 4px, rgba(4,3,12,0) 8px);
+  }
+  .dith {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: repeating-conic-gradient(rgba(6,5,16,0.55) 0% 25%, rgba(6,5,16,0) 0% 50%);
+    background-size: 8px 8px;
+  }
+  .glow { box-shadow: 0 0 24px 8px rgba(105,240,210,0.16); }
+
+
+</style>
+<div id="root" data-composition-id="s01-boot" data-width="1920" data-height="1080">
+
+<div id="s01-sh1" class="clip" data-start="0" data-duration="6.0" data-track-index="2" data-layout-allow-overflow>
+  <div id="s01-cam1" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:62% 46%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#06050f;"></div>
+    <div class="blk" style="left:0px;top:0px;width:480px;height:1080px;background:#0b0a1e;"></div>
+    <div class="blk" style="left:0px;top:984px;width:1920px;height:96px;background:#05040c;"></div>
+    <div class="blk" style="left:1568px;top:0;width:352px;height:1080px;background:rgba(105,240,210,0.06)"></div>
+    <div class="blk" style="left:1720px;top:0;width:200px;height:1080px;background:rgba(105,240,210,0.07)"></div>
+    <div class="blk" style="left:600px;top:204px;width:360px;height:576px;background:#2a2347"></div><div class="blk" style="left:672px;top:96px;width:720px;height:216px;background:#2a2347"></div><div class="blk" style="left:780px;top:132px;width:432px;height:36px;background:#3d3566"></div><div class="blk" style="left:924px;top:312px;width:72px;height:324px;background:#2a2347"></div><div class="blk" style="left:960px;top:276px;width:504px;height:396px;background:#f2c9a1"></div><div class="blk" style="left:996px;top:636px;width:432px;height:108px;background:#cf9f78"></div><div class="blk" style="left:1068px;top:708px;width:324px;height:72px;background:#f2c9a1"></div><div class="blk" style="left:1392px;top:528px;width:72px;height:108px;background:#f2c9a1"></div><div class="blk" style="left:1428px;top:600px;width:36px;height:36px;background:#cf9f78"></div><div class="blk" style="left:1140px;top:780px;width:180px;height:36px;background:#5a4a6e"></div><div class="blk" style="left:996px;top:816px;width:324px;height:144px;background:#cf9f78"></div><div class="blk" style="left:780px;top:456px;width:108px;height:180px;background:#5a49a8"></div><div class="blk" style="left:708px;top:420px;width:216px;height:72px;background:#69f0d2"></div><div class="blk" style="left:744px;top:564px;width:144px;height:36px;background:#23b39a"></div><div class="blk" style="left:1104px;top:420px;width:288px;height:36px;background:#2a2347"></div><div class="blk" style="left:1140px;top:492px;width:216px;height:36px;background:#0a0918"></div><div class="blk" style="left:1176px;top:528px;width:180px;height:36px;background:#f7f2e2"></div><div class="blk" style="left:1212px;top:528px;width:72px;height:36px;background:#69f0d2"></div><div id="s01f-eye-o" class="blk" style="left:1140px;top:492px;width:216px;height:72px;background:rgba(0,0,0,0)"></div><div id="s01f-eye-h" class="blk" style="left:1140px;top:528px;width:216px;height:36px;background:#0a0918"></div><div id="s01f-eye-c" class="blk" style="left:1104px;top:528px;width:252px;height:36px;background:#0a0918"></div><div id="s01f-rim" class="blk" style="left:1464px;top:312px;width:36px;height:432px;background:rgba(105,240,210,0.55)"></div><div id="s01f-rim2" class="blk" style="left:1464px;top:744px;width:36px;height:144px;background:rgba(105,240,210,0.22)"></div><div id="s01f-mouth" class="blk" style="left:1248px;top:708px;width:144px;height:36px;background:#a8705c"></div>
+    <div id="s01f-flick" class="blk" style="left:1184px;top:512px;width:120px;height:88px;background:#69f0d2;opacity:0"></div>
+    <div class="scan" style="opacity:0.3"></div>
+  </div>
+</div>
+
+<div id="s01-sh2" class="clip" data-start="6.0" data-duration="6.4" data-track-index="3" data-layout-allow-overflow>
+  <div id="s01-cam2" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:58% 74%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#06050f;"></div>
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:600px;background:#0a0918;"></div>
+    <div class="blk" style="left:432px;top:872px;width:1040px;height:40px;background:#241d50"></div><div class="blk" style="left:552px;top:792px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:712px;top:792px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:872px;top:792px;width:120px;height:80px;background:#3d3180"></div><div class="blk" style="left:1032px;top:792px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:1192px;top:792px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:1352px;top:792px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:432px;top:912px;width:1040px;height:240px;background:#121030"></div><div class="blk" style="left:432px;top:632px;width:160px;height:320px;background:#5a49a8"></div><div class="blk" style="left:552px;top:592px;width:480px;height:280px;background:#f2c9a1"></div><div class="blk" style="left:592px;top:832px;width:400px;height:40px;background:#cf9f78"></div><div id="s01h-finger" class="blk" style="left:672px;top:432px;width:80px;height:200px;background:#f2c9a1"></div><div id="s01h-mid" class="blk" style="left:792px;top:472px;width:80px;height:160px;background:#f2c9a1"></div><div id="s01h-ring" class="blk" style="left:912px;top:512px;width:80px;height:120px;background:#f2c9a1"></div><div id="s01h-pinky" class="blk" style="left:992px;top:592px;width:80px;height:80px;background:#f2c9a1"></div><div class="blk" style="left:512px;top:712px;width:80px;height:120px;background:#cf9f78"></div><div id="s01h-keylight" class="blk" style="left:832px;top:792px;width:120px;height:40px;background:#69f0d2"></div>
+    <div id="s01h-steam" class="blk" style="left:0;top:0;width:0;height:0">
+      <div class="blk" style="left:1200px;top:384px;width:8px;height:24px;background:rgba(247,242,226,0.28);"></div>
+      <div class="blk" style="left:1224px;top:352px;width:8px;height:24px;background:rgba(247,242,226,0.2);"></div>
+      <div class="blk" style="left:1192px;top:320px;width:8px;height:24px;background:rgba(247,242,226,0.14);"></div>
+    </div>
+    <div class="scan" style="opacity:0.3"></div>
+  </div>
+</div>
+
+</div>
+<script>
+
+  const tl = gsap.timeline({ paused: true });
+  const S = (sel, vars, at) => tl.set(sel, vars, at);
+  const F = (sel, from, to, at) => tl.fromTo(sel, from, Object.assign({ duration: 0.2, ease: "steps(4)" }, to), at);
+  function cycleBg(sel, at, dur, fw, n, fps) {
+    const period = n / fps;
+    const count = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { backgroundPositionX: "0px" }, at);
+    for (let c = 0; c < count; c++) {
+      for (let f = 1; f < n; f++) {
+        tl.set(sel, { backgroundPositionX: (-f * fw) + "px" }, at + c * period + (f * period) / n);
+      }
+      if (c < count - 1) tl.set(sel, { backgroundPositionX: "0px" }, at + (c + 1) * period - 0.02);
+    }
+  }
+  function blink(sel, at, dur, period, duty) {
+    const d = duty || 0.5;
+    const n = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { opacity: 1 }, at);
+    for (let i = 0; i < n; i++) {
+      tl.set(sel, { opacity: 0 }, at + i * period + period * d);
+      tl.set(sel, { opacity: 1 }, at + (i + 1) * period - 0.02);
+    }
+  }
+  function charsIn(sel, at, count, step, yFrom) {
+    tl.set(sel, { opacity: 0, y: (yFrom === undefined ? -24 : yFrom) }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.12, ease: "steps(3)", stagger: step }, at);
+  }
+  const BEAT = 0.46;
+  const bt = (n) => +(n * BEAT).toFixed(3);
+  function cam(sel, at, dur, from, to, steps) {
+    tl.fromTo(sel, from, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function camTo(sel, at, dur, to, steps) {
+    tl.to(sel, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function vis(sel, at, on) { tl.set(sel, { opacity: on ? 1 : 0 }, at); }
+  function swap(a, b, at) { tl.set(a, { opacity: 0 }, at); tl.set(b, { opacity: 1 }, at); }
+  function shake(sel, at, dur, amp, steps) {
+    tl.fromTo(sel, { x: 0, y: 0 }, { x: amp, y: -Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at);
+    tl.to(sel, { x: -amp, y: Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at + dur / 2);
+    tl.to(sel, { x: 0, y: 0, duration: 0.1 }, at + dur);
+  }
+  function lyricIn(id, at, dur, step) {
+    const sel = "#" + id + " .ch";
+    tl.set(sel, { opacity: 0, y: 12 }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.14, ease: "steps(2)", stagger: step || 0.05 }, at);
+    if (dur) tl.to(sel, { opacity: 0, y: -10, duration: 0.16, ease: "steps(3)", stagger: 0.012 }, at + dur - 0.55);
+  }
+  function typeIn(sel, at, step) {
+    tl.set(sel, { opacity: 0 }, at);
+    tl.set(sel, { opacity: 1 }, at);
+    tl.to(sel, { opacity: 1, duration: 0.05, stagger: step }, at);
+  }
+
+
+    // S01 — 侧脸大特写：一次眨眼，然后是屏幕光的刷新
+    cam("#s01-cam1", 0, 6.0, { scale: 1.0 }, { scale: 1.06 }, 30);
+    for (let i = 0; i < 11; i++) {
+      S("#s01f-eye-o", { opacity: 1 }, 0);
+      S("#s01f-eye-h", { opacity: 0 }, 0);
+      S("#s01f-eye-c", { opacity: 0 }, 0);
+      S("#s01f-flick", { opacity: 0 }, i * 0.5);
+      S("#s01f-flick", { opacity: 0.5 }, i * 0.5 + 0.06);
+      S("#s01f-flick", { opacity: 0 }, i * 0.5 + 0.16);
+    }
+    // 眨眼：上眼睑分两步下来，停两帧，再抬回
+    S("#s01f-eye-o", { opacity: 0 }, 1.30);
+    S("#s01f-eye-h", { opacity: 1 }, 1.30);
+    S("#s01f-eye-c", { opacity: 0 }, 1.30);
+    S("#s01f-eye-h", { opacity: 0 }, 1.42);
+    S("#s01f-eye-c", { opacity: 1 }, 1.42);
+    S("#s01f-eye-c", { opacity: 0 }, 1.60);
+    S("#s01f-eye-h", { opacity: 1 }, 1.60);
+    S("#s01f-eye-h", { opacity: 0 }, 1.72);
+    S("#s01f-eye-o", { opacity: 1 }, 1.72);
+    blink("#s01f-rim", 0, 6.0, 2.4);
+
+    // S02 — 手：抬到一半停住 → 落下 → 停在键上
+    cam("#s01-cam2", 6.0, 6.2, { scale: 1.0 }, { scale: 1.12 }, 30);
+    S("#s01h-finger", { y: 0 }, 6.0);
+    tl.to("#s01h-finger", { y: -28, duration: 0.24, ease: "steps(3)" }, 6.42);
+    S("#s01h-finger", { y: -28 }, 6.9);
+    tl.to("#s01h-finger", { y: 0, duration: 0.16, ease: "steps(2)" }, 8.06);
+    S("#s01h-keylight", { opacity: 0 }, 8.06);
+    S("#s01h-keylight", { opacity: 1 }, 8.22);
+    S("#s01h-keylight", { opacity: 0.35 }, 8.68);
+    tl.to("#s01h-mid", { y: 3, duration: 0.12 }, 8.10);
+    tl.to("#s01h-mid", { y: 0, duration: 0.12 }, 8.30);
+    for (let i = 0; i < 3; i++) {
+      S("#s01h-steam", { y: 0, opacity: 0.9 }, 6.4 + i * 1.9);
+      tl.to("#s01h-steam", { y: -34, opacity: 0, duration: 1.7, ease: "steps(5)" }, 6.4 + i * 1.9);
+    }
+  
+window.__timelines["s01-boot"] = tl;
+</script>
+</template>

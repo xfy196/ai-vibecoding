@@ -1,0 +1,466 @@
+﻿{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 272.11,
+    "samples": [
+      15.117,
+      45.352,
+      75.586,
+      105.821,
+      136.055,
+      166.289,
+      196.524,
+      226.758,
+      256.993
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      15.117,
+      75.586,
+      136.055,
+      196.524,
+      256.993
+    ],
+    "checked": 31,
+    "passed": 31
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"function night() {\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "function night() {",
+        "selector": "#s02-cam1 > div:nth-of-type(35)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s02-room.html",
+        "bbox": {
+          "x": 196.41,
+          "y": 245.08,
+          "width": 247.71,
+          "height": 27.27
+        },
+        "time": 12.72,
+        "times": [
+          12.72,
+          12.72,
+          12.72,
+          20.442,
+          20.442,
+          20.442,
+          20.442,
+          20.442,
+          27.256
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.722,
+        "elements": [
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(35)",
+            "text": "function night() {",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(36)",
+            "text": "return memory",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(37)",
+            "text": ".map(she)",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(6)",
+            "text": "waimi.app",
+            "fontPx": 24,
+            "time": 20.442,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(7)",
+            "text": "function night() {",
+            "fontPx": 24,
+            "time": 20.442,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(8)",
+            "text": "return memory",
+            "fontPx": 24,
+            "time": 20.442,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(9)",
+            "text": ".map(she)",
+            "fontPx": 24,
+            "time": 20.442,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(10)",
+            "text": ".filter(warm)",
+            "fontPx": 24,
+            "time": 20.442,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s02-sketch > div:nth-of-type(3)",
+            "text": "she.ts",
+            "fontPx": 24,
+            "time": 27.256,
+            "seconds": 4.997
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.00 s (41.34–46.34 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 41.339,
+        "seconds": 4.997,
+        "floorSeconds": 3,
+        "until": 46.336
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"<< REWIND\" renders at 24 px for 7.72 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "<< REWIND",
+        "selector": "#s03-rew",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s03-walk.html",
+        "bbox": {
+          "x": 240,
+          "y": 128,
+          "width": 122,
+          "height": 24
+        },
+        "time": 47.244,
+        "times": [
+          47.244
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.723,
+        "elements": [
+          {
+            "selector": "#s03-rew",
+            "text": "<< REWIND",
+            "fontPx": 24,
+            "time": 47.244,
+            "seconds": 7.723
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 6.36 s (47.70–54.06 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 47.699,
+        "seconds": 6.36,
+        "floorSeconds": 3,
+        "until": 54.059
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.91 s (55.88–61.78 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 55.876,
+        "seconds": 5.905,
+        "floorSeconds": 3,
+        "until": 61.781
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"git graph\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "git graph",
+        "selector": "#s04-cam1 > div:nth-of-type(5)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s04-break.html",
+        "bbox": {
+          "x": 875.33,
+          "y": 115.25,
+          "width": 116.28,
+          "height": 24.48
+        },
+        "time": 65.415,
+        "times": [
+          65.415,
+          65.415,
+          65.415
+        ],
+        "fontPx": 24.48,
+        "floorPx": 28,
+        "seconds": 4.997,
+        "elements": [
+          {
+            "selector": "#s04-cam1 > div:nth-of-type(5)",
+            "text": "git graph",
+            "fontPx": 24.48,
+            "time": 65.415,
+            "seconds": 4.997
+          },
+          {
+            "selector": "#s04-cam1 > div:nth-of-type(12)",
+            "text": "永远",
+            "fontPx": 24.48,
+            "time": 65.415,
+            "seconds": 4.997
+          },
+          {
+            "selector": "#s04-cam1 > div:nth-of-type(13) > div:nth-of-type(4)",
+            "text": "断了",
+            "fontPx": 24.48,
+            "time": 65.415,
+            "seconds": 4.997
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"waimi.exe — 记忆路线 v1.0\" renders at 24 px for 4.09 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "waimi.exe — 记忆路线 v1.0",
+        "selector": "#s05-cam1 > div:nth-of-type(5)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s05-game.html",
+        "bbox": {
+          "x": 120,
+          "y": 92,
+          "width": 316,
+          "height": 24
+        },
+        "time": 90.855,
+        "times": [
+          90.855
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.088,
+        "elements": [
+          {
+            "selector": "#s05-cam1 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 90.855,
+            "seconds": 4.088
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.18 s (114.48–117.66 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 114.477,
+        "seconds": 3.18,
+        "floorSeconds": 3,
+        "until": 117.657
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"vow.wav · 还在回旋\" renders at 24 px for 7.27 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "vow.wav · 还在回旋",
+        "selector": "#s06-cam3 > div:nth-of-type(27)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s06-tears.html",
+        "bbox": {
+          "x": 278.3,
+          "y": 632.45,
+          "width": 224.56,
+          "height": 24.06
+        },
+        "time": 135.828,
+        "times": [
+          135.828
+        ],
+        "fontPx": 24.06,
+        "floorPx": 28,
+        "seconds": 7.268,
+        "elements": [
+          {
+            "selector": "#s06-cam3 > div:nth-of-type(27)",
+            "text": "vow.wav · 还在回旋",
+            "fontPx": 24.06,
+            "time": 135.828,
+            "seconds": 7.268
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.18 s (255.30–258.48 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 255.302,
+        "seconds": 3.18,
+        "floorSeconds": 3,
+        "until": 258.482
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 8.18 s (258.94–267.11 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 258.936,
+        "seconds": 8.177,
+        "floorSeconds": 3,
+        "until": 267.113
+      }
+    ],
+    "enabled": true,
+    "step": 0.45400000000000773,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "e4c59f13-099b-43b5-baee-a79cf97d60aa",
+    "revision": "2db70e68-9f24-4758-818e-8cd88815de07",
+    "report": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\checks\\e4c59f13-099b-43b5-baee-a79cf97d60aa.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}

@@ -1,0 +1,776 @@
+﻿{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 5,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_repeated_fromto_without_baseline",
+        "severity": "warning",
+        "message": "2 tl.fromTo() calls target \"#s02-cam2\" with no stable baseline. The last-authored fromTo \"from\" values become the element's resting state for any seek before the first tween actually runs, because GSAP applies fromTo from-values at authoring time (immediateRender), not at tween position.",
+        "selector": "#s02-cam2",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s02-room.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Add `immediateRender: false` to every fromTo except the earliest-positioned one (at 12.2s), so pre-first-tween seeks keep its \"from\" values. A hiding `tl.set(..., 0)` baseline trips gsap_timeline_set_initial_hide, and a `gsap.set` authored before the fromTo calls is overwritten by them."
+      },
+      {
+        "code": "nested_clip_never_visible",
+        "severity": "warning",
+        "message": "<div id=\"s03-l2\"> plays from 0.05s to 6.75s, but it sits inside <div id=\"s03-sh2\">, which only shows from 8.07s to 14.91s, so it never appears. A nested data-start counts from the composition's start, not from <div id=\"s03-sh2\">.",
+        "selector": "#s03-l2",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s03-walk.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give <div id=\"s03-l2\"> a data-start between 8.07s to 14.91s in composition time, or move it out of <div id=\"s03-sh2\">."
+      },
+      {
+        "code": "nested_clip_never_visible",
+        "severity": "warning",
+        "message": "<div id=\"s03-l3\"> plays from 0.05s to 7.65s, but it sits inside <div id=\"s03-sh3\">, which only shows from 14.91s to 22.66s, so it never appears. A nested data-start counts from the composition's start, not from <div id=\"s03-sh3\">.",
+        "selector": "#s03-l3",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s03-walk.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give <div id=\"s03-l3\"> a data-start between 14.91s to 22.66s in composition time, or move it out of <div id=\"s03-sh3\">."
+      },
+      {
+        "code": "nested_clip_never_visible",
+        "severity": "warning",
+        "message": "<div id=\"s03-l4\"> plays from 0.05s to 7.65s, but it sits inside <div id=\"s03-sh4\">, which only shows from 22.66s to 30.37s, so it never appears. A nested data-start counts from the composition's start, not from <div id=\"s03-sh4\">.",
+        "selector": "#s03-l4",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s03-walk.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Give <div id=\"s03-l4\"> a data-start between 22.66s to 30.37s in composition time, or move it out of <div id=\"s03-sh4\">."
+      },
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 394 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s05-game.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split this sub-composition further into smaller .html files, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      }
+    ],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 17,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      },
+      {
+        "code": "console_warning",
+        "severity": "warning",
+        "message": "GSAP target #s03-rew not found. https://gsap.com",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {
+          "data-composition-id": "main",
+          "data-start": "0",
+          "data-duration": "62.44",
+          "data-width": "1920",
+          "data-height": "1080"
+        },
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1920,
+          "height": 1080
+        },
+        "time": 0,
+        "url": "http://127.0.0.1:11658/",
+        "line": 70
+      }
+    ]
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 62.44,
+    "samples": [
+      3.469,
+      10.407,
+      17.344,
+      24.282,
+      31.22,
+      38.158,
+      45.096,
+      52.033,
+      58.971
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      3.469,
+      17.344,
+      31.22,
+      45.096,
+      58.971
+    ],
+    "checked": 10,
+    "passed": 10
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 6,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 9 text elements stay under it for 0.5 s or more, the smallest \"function night() {\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "function night() {",
+        "selector": "#s02-cam1 > div:nth-of-type(35)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s02-room.html",
+        "bbox": {
+          "x": 193.92,
+          "y": 243.7,
+          "width": 248.52,
+          "height": 27.36
+        },
+        "time": 12.488,
+        "times": [
+          12.488,
+          12.488,
+          12.488,
+          20.106,
+          20.106,
+          20.106,
+          20.106,
+          20.106,
+          26.974
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.618,
+        "elements": [
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(35)",
+            "text": "function night() {",
+            "fontPx": 24,
+            "time": 12.488,
+            "seconds": 7.618
+          },
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(36)",
+            "text": "return memory",
+            "fontPx": 24,
+            "time": 12.488,
+            "seconds": 7.618
+          },
+          {
+            "selector": "#s02-cam1 > div:nth-of-type(37)",
+            "text": ".map(she)",
+            "fontPx": 24,
+            "time": 12.488,
+            "seconds": 7.618
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(6)",
+            "text": "waimi.app",
+            "fontPx": 24,
+            "time": 20.106,
+            "seconds": 12.113
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(7)",
+            "text": "function night() {",
+            "fontPx": 24,
+            "time": 20.106,
+            "seconds": 12.113
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(8)",
+            "text": "return memory",
+            "fontPx": 24,
+            "time": 20.106,
+            "seconds": 12.113
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(9)",
+            "text": ".map(she)",
+            "fontPx": 24,
+            "time": 20.106,
+            "seconds": 12.113
+          },
+          {
+            "selector": "#s02-cam2 > div:nth-of-type(10)",
+            "text": ".filter(warm)",
+            "fontPx": 24,
+            "time": 20.106,
+            "seconds": 12.113
+          },
+          {
+            "selector": "#s02-sketch > div:nth-of-type(3)",
+            "text": "she.ts",
+            "fontPx": 24,
+            "time": 26.974,
+            "seconds": 5.245
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 6.74 s (40.21–46.95 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 40.211,
+        "seconds": 6.744,
+        "floorSeconds": 3,
+        "until": 46.955
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 7.62 s (47.08–54.70 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 47.08,
+        "seconds": 7.617,
+        "floorSeconds": 3,
+        "until": 54.697
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"<< REWIND\" renders at 24 px for 7.74 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "<< REWIND",
+        "selector": "#s03-cam3 > div:nth-of-type(8)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s03-walk.html",
+        "bbox": {
+          "x": 240,
+          "y": 128,
+          "width": 122,
+          "height": 24
+        },
+        "time": 47.08,
+        "times": [
+          47.08
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.742,
+        "elements": [
+          {
+            "selector": "#s03-cam3 > div:nth-of-type(8)",
+            "text": "<< REWIND",
+            "fontPx": 24,
+            "time": 47.08,
+            "seconds": 7.742
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 4.62 s (54.82–59.44 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 54.822,
+        "seconds": 4.618,
+        "floorSeconds": 3,
+        "until": 59.44
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 500
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "9b87c6b6-3f68-4742-a26f-3691125fa02a",
+    "revision": "f965b66c-2af6-45dc-9ccd-fbab840aea0c",
+    "report": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\checks\\9b87c6b6-3f68-4742-a26f-3691125fa02a.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}

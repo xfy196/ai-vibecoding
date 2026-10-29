@@ -1,0 +1,41 @@
+﻿{
+  "ok": true,
+  "outputDir": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8",
+  "frames": [
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-00-at-58s.png",
+      "time": 58
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-01-at-72s.png",
+      "time": 72
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-02-at-158s.png",
+      "time": 158
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-03-at-215s.png",
+      "time": 215
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-04-at-268s.png",
+      "time": 268
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-05-at-271s.png",
+      "time": 271
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\frame-06-at-271.86s.png",
+      "time": 271.86
+    }
+  ],
+  "contactSheets": [
+    "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\62250a7d-044d-4682-a5df-9cdf6bde97a8\\contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}

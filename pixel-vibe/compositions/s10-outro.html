@@ -1,0 +1,203 @@
+<template>
+<style>
+
+  @font-face {
+    font-family: "Zpix";
+    src: url("assets/fonts/zpix.woff2") format("woff2");
+    font-display: block;
+  }
+  #root {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #070613;
+    font-family: "Zpix", monospace;
+    -webkit-font-smoothing: none;
+    text-rendering: geometricPrecision;
+  }
+  .blk { position: absolute; }
+  .t { white-space: pre; }
+  .ch { white-space: pre; }
+  .spr { background-repeat: repeat-x; image-rendering: pixelated; }
+  .clip { position: absolute; inset: 0; }
+  .scan {
+    position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgba(4,3,12,0.22) 0px, rgba(4,3,12,0.22) 4px, rgba(4,3,12,0) 4px, rgba(4,3,12,0) 8px);
+  }
+  .dith {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: repeating-conic-gradient(rgba(6,5,16,0.55) 0% 25%, rgba(6,5,16,0) 0% 50%);
+    background-size: 8px 8px;
+  }
+  .glow { box-shadow: 0 0 24px 8px rgba(105,240,210,0.16); }
+
+
+</style>
+<div id="root" data-composition-id="s10-outro" data-width="1920" data-height="1080">
+
+<div id="s10-sh1" class="clip" data-start="0.00" data-duration="15.00" data-track-index="2" data-layout-allow-overflow>
+  <div id="s10-cam1" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 54%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#0a0918;"></div>
+    <div class="blk" style="left:0px;top:784px;width:1920px;height:296px;background:#07061a;"></div>
+    <div class="blk" style="left:1272px;top:96px;width:520px;height:464px;background:#312868;"></div>
+    <div class="blk" style="left:1288px;top:112px;width:488px;height:432px;background:#1a1a33;"></div>
+    <div class="blk" style="left:1288px;top:112px;width:488px;height:120px;background:#232246;"></div>
+    <div class="blk" style="left:1288px;top:232px;width:488px;height:120px;background:#2c2a4c;"></div>
+    <div class="blk" style="left:1288px;top:352px;width:488px;height:192px;background:#343052;"></div>
+    <div class="blk" style="left:1392px;top:384px;width:48px;height:96px;background:#1e1b38;"></div>
+    <div class="blk" style="left:1512px;top:360px;width:64px;height:120px;background:#1e1b38;"></div>
+    <div class="blk" style="left:1624px;top:392px;width:56px;height:88px;background:#1e1b38;"></div>
+    <div class="blk" style="left:1256px;top:560px;width:552px;height:24px;background:#241d50;"></div>
+    <div id="s10-dawn" class="blk" style="left:1288px;top:112px;width:488px;height:432px;background:#ff9440;opacity:0"></div>
+    <div id="s10-amb" class="blk" style="left:0;top:0;width:1920px;height:1080px;background:rgba(255,148,64,0.20);opacity:0"></div>
+    <div class="blk" style="left:96px;top:672px;width:1200px;height:32px;background:#312868;"></div>
+    <div class="blk" style="left:96px;top:704px;width:1200px;height:136px;background:#1b1638;"></div>
+    
+  <div class="blk" style="left:384px;top:664px;width:600px;height:16px;background:#312868"></div>
+  <div id="s10-lap-body" class="blk" style="left:384px;top:656px;width:600px;height:24px;background:#3d3180"></div>
+  <div id="s10-lap-lid" class="blk" style="left:384px;top:296px;width:600px;height:368px;background:#241d50;transform-origin:50% 100%">
+    <div class="blk" style="left:8px;top:8px;width:584px;height:344px;background:#050710"></div>
+    <div id="s10-lap-screen" class="blk" style="left:8px;top:8px;width:584px;height:344px;background:#ffc96b;opacity:0.18"></div>
+  </div>
+    <div id="s10-dev1" class="blk spr" style="left:480px;top:280px;width:576px;height:640px;background-image:url(assets/sprites/hero-back.svg);background-size:1152px 640px;background-position:0 0;"></div>
+    <div id="s10-hand" class="blk" style="left:600px;top:400px;width:280px;height:160px;opacity:0">
+      <div class="blk" style="left:0px;top:40px;width:200px;height:48px;background:#f2c9a1;"></div>
+      <div class="blk" style="left:0px;top:40px;width:200px;height:12px;background:#d3a077;"></div>
+      <div class="blk" style="left:0px;top:80px;width:280px;height:80px;background:#5a49a8;"></div>
+    </div>
+    <div id="s10-dim" class="blk" style="left:0;top:0;width:1920px;height:1080px;background:#05040f;opacity:0"></div>
+    <div class="scan" style="opacity:0.26"></div>
+  </div>
+</div>
+
+<div id="s10-sh2" class="clip" data-start="15.00" data-duration="15.00" data-track-index="3" data-layout-allow-overflow>
+  <div id="s10-cam2" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:46% 52%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#151228;"></div>
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:800px;background:#1a1730;"></div>
+    <div class="blk" style="left:0px;top:800px;width:1920px;height:280px;background:#0d0b1c;"></div>
+    <div class="blk" style="left:1272px;top:96px;width:520px;height:464px;background:#312868;"></div>
+    <div class="blk" style="left:1288px;top:112px;width:488px;height:432px;background:#3a2444;"></div>
+    <div class="blk" style="left:1288px;top:112px;width:488px;height:120px;background:#7a4436;"></div>
+    <div class="blk" style="left:1288px;top:232px;width:488px;height:104px;background:#ff9440;"></div>
+    <div class="blk" style="left:1288px;top:336px;width:488px;height:88px;background:#ffc96b;"></div>
+    <div class="blk" style="left:1288px;top:424px;width:488px;height:120px;background:#4a3050;"></div>
+    <div class="blk" style="left:1384px;top:448px;width:48px;height:96px;background:#2a1f3e;"></div>
+    <div class="blk" style="left:1504px;top:424px;width:64px;height:120px;background:#2a1f3e;"></div>
+    <div class="blk" style="left:1624px;top:456px;width:56px;height:88px;background:#2a1f3e;"></div>
+    <div class="blk" style="left:1256px;top:560px;width:552px;height:24px;background:#241d50;"></div>
+    <div id="s10-light" class="blk" style="left:1272px;top:584px;width:648px;height:360px;background:rgba(255,148,64,0.10);transform-origin:0 50%;transform:scaleX(0.04)"></div>
+    <div class="blk" style="left:96px;top:672px;width:1200px;height:32px;background:#312868;"></div>
+    <div class="blk" style="left:96px;top:704px;width:1200px;height:136px;background:#1b1638;"></div>
+    <div id="s10-dev2" class="blk spr" style="left:280px;top:384px;width:648px;height:720px;background-image:url(assets/sprites/hero-back.svg);background-size:1296px 720px;background-position:0 0;"></div>
+    <div id="s10-cat2" class="blk spr" style="left:880px;top:608px;width:96px;height:64px;background-image:url(assets/sprites/cat.svg);background-size:192px 64px;background-position:0 0;"></div>
+    <div class="scan" style="opacity:0.26"></div>
+  </div>
+</div>
+
+<div id="s10-sh3" class="clip" data-start="30.00" data-duration="17.08" data-track-index="4" data-layout-allow-overflow>
+  <div id="s10-cam3" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 54%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#1a1730;"></div>
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:160px;background:#221c38;"></div>
+    <div class="blk" style="left:0px;top:160px;width:1920px;height:160px;background:#3a2444;"></div>
+    <div class="blk" style="left:0px;top:320px;width:1920px;height:160px;background:#5e3040;"></div>
+    <div class="blk" style="left:0px;top:480px;width:1920px;height:160px;background:#8a4438;"></div>
+    <div class="blk" style="left:0px;top:640px;width:1920px;height:120px;background:#ff9440;"></div>
+    <div class="blk" style="left:0px;top:760px;width:1920px;height:120px;background:#ffc96b;"></div>
+    <div class="blk" style="left:0px;top:0px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:452px;top:188px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:904px;top:376px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1356px;top:124px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:1808px;top:312px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:380px;top:60px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:832px;top:248px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:1284px;top:436px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1736px;top:184px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:308px;top:372px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:760px;top:120px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1212px;top:308px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1664px;top:56px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:236px;top:244px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:688px;top:432px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1140px;top:180px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:1592px;top:368px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:164px;top:116px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:616px;top:304px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:1068px;top:52px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:1520px;top:240px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:92px;top:428px;width:8px;height:8px;background:#f7f2e2;"></div><div class="blk" style="left:544px;top:176px;width:8px;height:8px;background:#4a3f8f;"></div><div class="blk" style="left:996px;top:364px;width:8px;height:8px;background:#4a3f8f;"></div>
+    <div class="blk" style="left:960px;top:624px;width:160px;height:160px;background:#ffe6b0;"></div>
+    <div class="blk" style="left:1000px;top:592px;width:80px;height:224px;background:#fff1cc;"></div>
+    <div class="blk" style="left:32px;top:776px;width:112px;height:264px;background:#0d0b20;"></div><div class="blk" style="left:188px;top:720px;width:112px;height:320px;background:#0d0b20;"></div><div class="blk" style="left:344px;top:808px;width:112px;height:232px;background:#0d0b20;"></div><div class="blk" style="left:500px;top:744px;width:112px;height:296px;background:#0d0b20;"></div><div class="blk" style="left:656px;top:688px;width:112px;height:352px;background:#0d0b20;"></div><div class="blk" style="left:812px;top:792px;width:112px;height:248px;background:#0d0b20;"></div><div class="blk" style="left:968px;top:736px;width:112px;height:304px;background:#0d0b20;"></div><div class="blk" style="left:1124px;top:816px;width:112px;height:224px;background:#0d0b20;"></div><div class="blk" style="left:1280px;top:760px;width:112px;height:280px;background:#0d0b20;"></div><div class="blk" style="left:1436px;top:712px;width:112px;height:328px;background:#0d0b20;"></div><div class="blk" style="left:1592px;top:800px;width:112px;height:240px;background:#0d0b20;"></div><div class="blk" style="left:1748px;top:744px;width:112px;height:296px;background:#0d0b20;"></div>
+    <div class="blk" style="left:0;top:784px;width:1920px;height:296px;background:#120e20"></div>
+    <div id="s10-win" class="blk" style="left:784px;top:512px;width:176px;height:200px;background:#ffc96b;opacity:0.85"></div>
+    <div id="s10-figure" class="blk" style="left:824px;top:552px;width:96px;height:136px;background:#120e20"></div>
+  </div>
+</div>
+
+</div>
+<script>
+
+  const tl = gsap.timeline({ paused: true });
+  const S = (sel, vars, at) => tl.set(sel, vars, at);
+  const F = (sel, from, to, at) => tl.fromTo(sel, from, Object.assign({ duration: 0.2, ease: "steps(4)" }, to), at);
+  function cycleBg(sel, at, dur, fw, n, fps) {
+    const period = n / fps;
+    const count = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { backgroundPositionX: "0px" }, at);
+    for (let c = 0; c < count; c++) {
+      for (let f = 1; f < n; f++) {
+        tl.set(sel, { backgroundPositionX: (-f * fw) + "px" }, at + c * period + (f * period) / n);
+      }
+      if (c < count - 1) tl.set(sel, { backgroundPositionX: "0px" }, at + (c + 1) * period - 0.02);
+    }
+  }
+  function blink(sel, at, dur, period, duty) {
+    const d = duty || 0.5;
+    const n = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { opacity: 1 }, at);
+    for (let i = 0; i < n; i++) {
+      tl.set(sel, { opacity: 0 }, at + i * period + period * d);
+      tl.set(sel, { opacity: 1 }, at + (i + 1) * period - 0.02);
+    }
+  }
+  function charsIn(sel, at, count, step, yFrom) {
+    tl.set(sel, { opacity: 0, y: (yFrom === undefined ? -24 : yFrom) }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.12, ease: "steps(3)", stagger: step }, at);
+  }
+  const BEAT = 0.46;
+  const bt = (n) => +(n * BEAT).toFixed(3);
+  function cam(sel, at, dur, from, to, steps) {
+    tl.fromTo(sel, from, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function camTo(sel, at, dur, to, steps) {
+    tl.to(sel, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function vis(sel, at, on) { tl.set(sel, { opacity: on ? 1 : 0 }, at); }
+  function swap(a, b, at) { tl.set(a, { opacity: 0 }, at); tl.set(b, { opacity: 1 }, at); }
+  function shake(sel, at, dur, amp, steps) {
+    tl.fromTo(sel, { x: 0, y: 0 }, { x: amp, y: -Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at);
+    tl.to(sel, { x: -amp, y: Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at + dur / 2);
+    tl.to(sel, { x: 0, y: 0, duration: 0.1 }, at + dur);
+  }
+  function lyricIn(id, at, dur, step) {
+    const sel = "#" + id + " .ch";
+    tl.set(sel, { opacity: 0, y: 12 }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.14, ease: "steps(2)", stagger: step || 0.05 }, at);
+    if (dur) tl.to(sel, { opacity: 0, y: -10, duration: 0.16, ease: "steps(3)", stagger: 0.012 }, at + dur - 0.55);
+  }
+  function typeIn(sel, at, step) {
+    tl.set(sel, { opacity: 0 }, at);
+    tl.set(sel, { opacity: 1 }, at);
+    tl.to(sel, { opacity: 1, duration: 0.05, stagger: step }, at);
+  }
+
+
+    // S32 — 合上笔记本
+    cycleBg("#s10-dev1", 0, 6.0, 576, 2, 4.35);
+    S("#s10-hand", { opacity: 0 }, 0);
+    S("#s10-hand", { opacity: 1 }, 1.6);
+    tl.to("#s10-hand", { y: 40, x: 10, duration: 0.5, ease: "steps(5)" }, 1.8);
+    S("#s10-lap-lid", { rotation: 0 }, 0);
+    tl.to("#s10-lap-lid", { rotation: -92, duration: 0.7, ease: "steps(7)" }, 2.4);
+    S("#s10-lap-screen", { opacity: 1 }, 0);
+    tl.to("#s10-lap-screen", { opacity: 0, duration: 0.2 }, 2.6);
+    S("#s10-hand", { opacity: 0 }, 4.4);
+    F("#s10-dim", { opacity: 0 }, { opacity: 0.55, duration: 2.4, ease: "steps(8)" }, 4.6);
+    F("#s10-dawn", { opacity: 0 }, { opacity: 0.5, duration: 8.4, ease: "steps(18)" }, 6.2);
+    F("#s10-amb", { opacity: 0 }, { opacity: 0.2, duration: 9.0, ease: "steps(18)" }, 5.6);
+    cam("#s10-cam1", 0, 15.0, { scale: 1.04 }, { scale: 1.0 }, 24);
+
+    // S33 — 他靠着睡了，晨光爬过地板到他的脚
+    cycleBg("#s10-dev2", 15.0, 12.0, 648, 2, 3.0);
+    cycleBg("#s10-cat2", 15.0, 12.0, 96, 2, 1.0);
+    F("#s10-light", { scaleX: 0.04 }, { scaleX: 1, duration: 13.0, ease: "steps(26)" }, 15.4);
+    cam("#s10-cam2", 15.0, 15.0, { scale: 1.02 }, { scale: 1.0 }, 20);
+
+    // S34 — 城市剪影里那个小小的他，然后一路拉远到一个熄灭的像素点
+    cam("#s10-cam3", 30.0, 12.0, { scale: 1.0 }, { scale: 1.0 }, 2);
+    F("#s10-figure", { y: 0 }, { y: -2, duration: 1.2, ease: "steps(2)" }, 33.0);
+    camTo("#s10-cam3", 42.0, 5.0, { scale: 0.006 }, 40);
+    F("#s10-win", { opacity: 0.85 }, { opacity: 0, duration: 4.0, ease: "steps(8)" }, 43.0);
+  
+window.__timelines["s10-outro"] = tl;
+</script>
+</template>
