@@ -1,18 +1,21 @@
 /*
- * ESP32-C3 SuperMini · 0.96" OLED NTP 网络时钟
+ * ESP32 · 0.96" OLED NTP 网络时钟
  * =============================================================
+ * 支持两种板子（platformio.ini 里选环境，引脚见 config.h 的板型区）：
+ *   - esp32c3  : ESP32-C3 SuperMini   SDA=IO4   SCL=IO5   按钮=IO3
+ *   - esp32dev : ESP32 DevKit V1     SDA=GPIO21 SCL=GPIO22 按钮=GPIO4
+ *
  * 功能
  *   - 连 WiFi，SNTP 校时，按 POSIX TZ 字符串换算本地时间（支持夏令时）
  *   - 七段大字号 HH:MM，顶栏日期星期 + WiFi 信号，底栏时区 + 校时状态
  *   - 深睡到下一个 30 秒 / 分钟边界，醒来只做「刷新屏幕」这一件事
  *   - 每 SYNC_INTERVAL_MIN 分钟联网校一次时；用实测误差自动补偿 RC 计时漂移
  *   - 手机网页配网：没配置过就开热点 NTP-CLOCK-XXXX，连上填 SSID / 密码 / 时区
- *   - IO3 外接按钮（可选）：短按立即校时，长按 1.2s 看诊断页，按住 3s 重新配网
+ *   - 外接按钮（可选）：短按立即校时，长按 1.2s 看诊断页，按住 3s 重新配网
  *
  * 接线（以模块丝印为准）
- *   OLED VCC -> 3V3      OLED SDA -> IO4
- *   OLED GND -> GND      OLED SCL -> IO5
- *   按钮一端 -> IO3，另一端 -> GND
+ *   ESP32-C3      OLED VCC->3V3  GND->GND  SDA->IO4     SCL->IO5     按钮->IO3 - GND
+ *   DevKit V1     OLED VCC->3V3  GND->GND  SDA->GPIO21  SCL->GPIO22  按钮->GPIO4 - GND
  *
  * 时间基准存在 RTC 内存里，深睡和复位都不丢；只有彻底断电才需要重新联网校时。
  * WiFi 账号密码存在 NVS 里，掉电不丢。
@@ -21,6 +24,7 @@
 #include <Arduino.h>
 #include <WiFi.h>
 #include <driver/gpio.h>
+#include <driver/rtc_io.h>
 #include <esp_sleep.h>
 #include <esp_timer.h>
 #include <math.h>
@@ -40,8 +44,20 @@
 #define WIFI_PASSWORD ""
 #endif
 
-#if BTN_ENABLED && BTN_PIN > 5
-#error "ESP32-C3 只有 GPIO0–GPIO5 能从深睡唤醒，BTN_PIN 超范围了"
+#if BTN_ENABLED
+#  if BTN_WAKE_EXT0
+// 经典 ESP32：只有 RTC GPIO 能做 ext0 唤醒源
+#    if !(BTN_PIN == 0 || BTN_PIN == 2 || BTN_PIN == 4 ||                     \
+          (BTN_PIN >= 12 && BTN_PIN <= 15) ||                                 \
+          (BTN_PIN >= 25 && BTN_PIN <= 27) ||                                 \
+          (BTN_PIN >= 32 && BTN_PIN <= 39))
+#      error "ESP32 只有 RTC GPIO 能从深睡唤醒：0 / 2 / 4 / 12-15 / 25-27 / 32-39"
+#    endif
+#  else
+#    if BTN_PIN > 5
+#      error "ESP32-C3 只有 GPIO0-GPIO5 能从深睡唤醒，BTN_PIN 超范围了"
+#    endif
+#  endif
 #endif
 
 // ---------------------------------------------------------------- 掉电保持
@@ -296,10 +312,18 @@ static void armWake(uint64_t us) {
   }
 #else
 #if BTN_ENABLED
+#  if BTN_WAKE_EXT0
+  // 经典 ESP32：ext0 单脚唤醒，低电平触发。深睡时只有 RTC 上拉有效，
+  // 所以这里用 rtc_gpio_* 而不是普通 gpio_pullup_en。
+  rtc_gpio_pullup_en((gpio_num_t)BTN_PIN);
+  rtc_gpio_pulldown_dis((gpio_num_t)BTN_PIN);
+  esp_sleep_enable_ext0_wakeup((gpio_num_t)BTN_PIN, 0);
+#  else
   // C3 没有 ext1，用的是 GPIO 深睡唤醒：低电平触发，内部上拉由 IDF 自己开关。
   gpio_pullup_en((gpio_num_t)BTN_PIN);
   gpio_pulldown_dis((gpio_num_t)BTN_PIN);
   esp_deep_sleep_enable_gpio_wakeup(1ULL << BTN_PIN, ESP_GPIO_WAKEUP_GPIO_LOW);
+#  endif
 #endif
   esp_sleep_enable_timer_wakeup(us);
   esp_deep_sleep_start();
@@ -388,7 +412,9 @@ void setup() {
 
   const esp_sleep_wakeup_cause_t cause = esp_sleep_get_wakeup_cause();
   const bool coldBoot = cause == ESP_SLEEP_WAKEUP_UNDEFINED;
-  const bool btnWake = cause == ESP_SLEEP_WAKEUP_GPIO || cause == ESP_SLEEP_WAKEUP_EXT1;
+  const bool btnWake = cause == ESP_SLEEP_WAKEUP_GPIO ||
+                       cause == ESP_SLEEP_WAKEUP_EXT0 ||
+                       cause == ESP_SLEEP_WAKEUP_EXT1;
 
   if (g.magic != STATE_MAGIC) {
     memset(&g, 0, sizeof g);
@@ -452,7 +478,9 @@ void setup() {
   uiSetTzLabel(gCfg.tzLabel);
 
   if (Serial) {
-    Serial.printf("\n[boot] #%lu cause=%d time=%s syncs=%lu wifi=%s\n",
+    Serial.printf("\n[board] %s (%s)  SDA=%d SCL=%d BTN=%d\n", BOARD_TITLE,
+                  BOARD_SUBTITLE, I2C_SDA_PIN, I2C_SCL_PIN, BTN_PIN);
+    Serial.printf("[boot] #%lu cause=%d time=%s syncs=%lu wifi=%s\n",
                   (unsigned long)g.boots, (int)cause, g.haveTime ? "yes" : "no",
                   (unsigned long)g.syncs, gCfg.hasWifi() ? gCfg.ssid : "(none)");
   }

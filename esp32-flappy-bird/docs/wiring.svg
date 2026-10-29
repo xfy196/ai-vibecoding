@@ -1,0 +1,376 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1880" viewBox="0 0 800 940"
+     font-family="-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei','Segoe UI',sans-serif">
+
+  <!-- ==================== 背景 ==================== -->
+  <rect width="800" height="940" fill="#f4f6fb"/>
+  <circle cx="762" cy="42" r="108" fill="#e3eaf8" opacity="0.7"/>
+  <circle cx="20" cy="880" r="78" fill="#e3eaf8" opacity="0.55"/>
+
+  <!-- ==================== 标题 ==================== -->
+  <text x="40" y="46" font-size="23" font-weight="700" fill="#0f172a">ESP32 DevKit V1 × 0.96″ OLED</text>
+  <text x="40" y="68" font-size="11.5" fill="#64748b">Flappy Bird 单键小游戏 · SSD1306 128×64 · I2C 四线 · 3.3V · 板载 BOOT 键就是手柄</text>
+
+  <rect x="466" y="27" width="104" height="32" rx="16" fill="#fff7ed" stroke="#fed7aa"/>
+  <circle cx="481" cy="43" r="3.4" fill="#f59e0b"/>
+  <text x="490" y="47" font-size="10" font-weight="700" fill="#b45309">BOOT  GPIO0</text>
+
+  <rect x="578" y="27" width="86" height="32" rx="16" fill="#ffffff" stroke="#dbe3f0"/>
+  <circle cx="593" cy="43" r="3.4" fill="#2563eb"/>
+  <text x="602" y="47" font-size="10" font-weight="700" fill="#1d4ed8">SDA  21</text>
+
+  <rect x="672" y="27" width="88" height="32" rx="16" fill="#ffffff" stroke="#dbe3f0"/>
+  <circle cx="687" cy="43" r="3.4" fill="#16a34a"/>
+  <text x="696" y="47" font-size="10" font-weight="700" fill="#15803d">SCL  22</text>
+
+  <!-- ==================== ESP32 DevKit V1 卡片 ==================== -->
+  <rect x="40" y="100" width="210" height="300" rx="16" fill="#1e293b" stroke="#0b1220" stroke-width="1.2"/>
+  <rect x="48" y="108" width="194" height="284" rx="11" fill="none" stroke="#334155"/>
+
+  <text x="60" y="131" font-size="14.5" font-weight="700" fill="#f8fafc">ESP32 DevKit V1</text>
+  <text x="60" y="147" font-size="9" fill="#94a3b8">WROOM-32 · 30-pin · 2.4GHz</text>
+
+  <!-- 板载天线 -->
+  <g stroke="#475569" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M146 180 h14 v-8 h14 v8 h14 v-8 h14 v8 h14"/>
+  </g>
+  <text x="146" y="196" font-size="6.5" fill="#64748b">2.4G 天线</text>
+
+  <!-- WROOM-32 模块 -->
+  <rect x="62" y="164" width="80" height="66" rx="4" fill="#cbd5e1" stroke="#94a3b8"/>
+  <rect x="68" y="170" width="68" height="54" rx="2" fill="none" stroke="#94a3b8"/>
+  <text x="102" y="194" font-size="8" font-weight="700" fill="#475569" text-anchor="middle">WROOM-32</text>
+  <text x="102" y="207" font-size="6.5" fill="#64748b" text-anchor="middle">ESP32-D0WD</text>
+
+  <text x="62" y="246" font-size="8" fill="#64748b">逻辑画法：只画用到的 4 个脚，</text>
+  <text x="62" y="258" font-size="8" fill="#64748b">真实排针顺序见下方排针图</text>
+
+  <circle cx="66" cy="275" r="2.6" fill="#22c55e"/>
+  <text x="73" y="278" font-size="7" fill="#94a3b8">GPIO2 = 板载 LED（高电平亮）</text>
+
+  <!-- EN / BOOT：BOOT 高亮 = 游戏输入 -->
+  <rect x="103" y="296" width="56" height="21" rx="5" fill="#3b2a12" stroke="#f59e0b" stroke-width="1.3"/>
+  <rect x="62" y="300" width="34" height="13" rx="3" fill="#334155" stroke="#475569"/>
+  <text x="79" y="309.5" font-size="6.5" font-weight="600" fill="#cbd5e1" text-anchor="middle">EN</text>
+  <rect x="108" y="300" width="44" height="13" rx="3" fill="#7c4a03" stroke="#fbbf24"/>
+  <text x="130" y="309.5" font-size="6.5" font-weight="700" fill="#fff7ed" text-anchor="middle">BOOT</text>
+  <text x="164" y="309" font-size="6.5" fill="#fbbf24">= GPIO0</text>
+
+  <!-- USB-UART + micro-USB -->
+  <rect x="62" y="330" width="84" height="16" rx="3" fill="#243144" stroke="#3b4a63"/>
+  <text x="104" y="341" font-size="6" fill="#8fa3bf" text-anchor="middle">CH340 / CP2102</text>
+
+  <rect x="62" y="360" width="38" height="13" rx="3" fill="#94a3b8" stroke="#64748b"/>
+  <rect x="68" y="363" width="26" height="7" rx="1.5" fill="#475569"/>
+  <text x="106" y="369" font-size="6.5" fill="#94a3b8">micro-USB</text>
+
+  <text x="62" y="391" font-size="8.5" font-weight="700" fill="#fbbf24">↑ 板载 BOOT 键 = 游戏手柄</text>
+
+  <!-- 右缘引脚（逻辑顺序） -->
+  <g>
+    <rect x="238" y="205" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="256" cy="214" r="2.6" fill="#111827"/>
+    <text x="230" y="218.5" font-size="11.5" fill="#e2e8f0" text-anchor="end">3V3</text>
+
+    <rect x="238" y="243" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="256" cy="252" r="2.6" fill="#111827"/>
+    <text x="230" y="256.5" font-size="11.5" fill="#e2e8f0" text-anchor="end">GND</text>
+
+    <rect x="238" y="281" width="20" height="18" rx="4" fill="#bfdbfe" stroke="#2563eb"/>
+    <circle cx="256" cy="290" r="2.6" fill="#111827"/>
+    <text x="230" y="294.5" font-size="11.5" font-weight="700" fill="#bfdbfe" text-anchor="end">GPIO21</text>
+
+    <rect x="238" y="319" width="20" height="18" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+    <circle cx="256" cy="328" r="2.6" fill="#111827"/>
+    <text x="230" y="332.5" font-size="11.5" font-weight="700" fill="#bbf7d0" text-anchor="end">GPIO22</text>
+  </g>
+
+  <!-- ==================== OLED 卡片 ==================== -->
+  <rect x="440" y="100" width="204" height="300" rx="16" fill="#1e293b" stroke="#0b1220" stroke-width="1.2"/>
+  <rect x="448" y="108" width="188" height="284" rx="11" fill="none" stroke="#334155"/>
+
+  <text x="464" y="132" font-size="15" font-weight="700" fill="#f8fafc">OLED 0.96″</text>
+  <text x="464" y="148" font-size="9" fill="#94a3b8">SSD1306 · 128×64 · I2C</text>
+
+  <!-- 屏玻璃：游戏画面（局部坐标 128×64） -->
+  <rect x="474" y="160" width="148" height="74" rx="3" fill="#05080f" stroke="#2b3648"/>
+  <g transform="translate(474,160) scale(1.15625)">
+    <!-- 星点 -->
+    <g fill="#e8f1ff">
+      <rect x="6" y="24" width="1" height="1"/>
+      <rect x="18" y="12" width="1" height="1"/>
+      <rect x="30" y="30" width="3" height="1"/>
+      <rect x="44" y="20" width="1" height="1"/>
+      <rect x="58" y="36" width="1" height="1"/>
+      <rect x="70" y="10" width="1" height="1"/>
+      <rect x="96" y="26" width="3" height="1"/>
+      <rect x="108" y="14" width="1" height="1"/>
+      <rect x="118" y="42" width="1" height="1"/>
+      <rect x="12" y="54" width="1" height="1"/>
+      <rect x="102" y="34" width="1" height="1"/>
+    </g>
+
+    <!-- 水管 -->
+    <g fill="none" stroke="#e8f1ff" stroke-width="1.2">
+      <rect x="52" y="0" width="12" height="18"/>
+      <rect x="52" y="41" width="12" height="18"/>
+      <rect x="106" y="0" width="12" height="28"/>
+      <rect x="106" y="51" width="12" height="8"/>
+    </g>
+    <g fill="#e8f1ff">
+      <rect x="50" y="14" width="16" height="4"/>
+      <rect x="50" y="41" width="16" height="4"/>
+      <rect x="104" y="24" width="16" height="4"/>
+      <rect x="104" y="51" width="16" height="4"/>
+    </g>
+
+    <!-- 分数：白字 + 1px 黑描边，压在水管上也看得清 -->
+    <text x="61" y="14" font-size="20" font-weight="700" fill="#e8f1ff"
+          stroke="#05080f" stroke-width="2" paint-order="stroke"
+          font-family="'SF Mono','Menlo','Consolas',monospace">7</text>
+
+    <!-- 小鸟 -->
+    <g transform="translate(24,27)">
+      <ellipse cx="6" cy="4" rx="5.6" ry="4" fill="#e8f1ff"/>
+      <circle cx="8.5" cy="2.5" r="1" fill="#05080f"/>
+      <path d="M10.5 3.4 L13 4.2 L10.5 5.2 Z" fill="#e8f1ff"/>
+      <path d="M2 4.6 q3 2.8 6 1" fill="none" stroke="#05080f" stroke-width="0.8"/>
+    </g>
+
+    <!-- 地面 -->
+    <rect x="0" y="59" width="128" height="1" fill="#e8f1ff"/>
+    <g fill="#e8f1ff">
+      <rect x="0" y="61" width="6" height="1"/>
+      <rect x="6" y="63" width="6" height="1"/>
+      <rect x="12" y="61" width="6" height="1"/>
+      <rect x="18" y="63" width="6" height="1"/>
+      <rect x="24" y="61" width="6" height="1"/>
+      <rect x="30" y="63" width="6" height="1"/>
+      <rect x="36" y="61" width="6" height="1"/>
+      <rect x="42" y="63" width="6" height="1"/>
+      <rect x="48" y="61" width="6" height="1"/>
+      <rect x="54" y="63" width="6" height="1"/>
+      <rect x="60" y="61" width="6" height="1"/>
+      <rect x="66" y="63" width="6" height="1"/>
+      <rect x="72" y="61" width="6" height="1"/>
+      <rect x="78" y="63" width="6" height="1"/>
+      <rect x="84" y="61" width="6" height="1"/>
+      <rect x="90" y="63" width="6" height="1"/>
+      <rect x="96" y="61" width="6" height="1"/>
+      <rect x="102" y="63" width="6" height="1"/>
+      <rect x="108" y="61" width="6" height="1"/>
+      <rect x="114" y="63" width="6" height="1"/>
+      <rect x="120" y="61" width="6" height="1"/>
+    </g>
+  </g>
+
+  <!-- 左缘引脚 -->
+  <g>
+    <rect x="420" y="205" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="424" cy="214" r="2.6" fill="#111827"/>
+    <text x="452" y="218.5" font-size="11.5" fill="#e2e8f0">VCC</text>
+
+    <rect x="420" y="243" width="20" height="18" rx="4" fill="#fbbf24" stroke="#b45309"/>
+    <circle cx="424" cy="252" r="2.6" fill="#111827"/>
+    <text x="452" y="256.5" font-size="11.5" fill="#e2e8f0">GND</text>
+
+    <rect x="420" y="281" width="20" height="18" rx="4" fill="#bfdbfe" stroke="#2563eb"/>
+    <circle cx="424" cy="290" r="2.6" fill="#111827"/>
+    <text x="452" y="294.5" font-size="11.5" font-weight="700" fill="#dbeafe">SDA</text>
+
+    <rect x="420" y="319" width="20" height="18" rx="4" fill="#bbf7d0" stroke="#16a34a"/>
+    <circle cx="424" cy="328" r="2.6" fill="#111827"/>
+    <text x="452" y="332.5" font-size="11.5" font-weight="700" fill="#dcfce7">SCL</text>
+  </g>
+
+  <text x="464" y="366" font-size="8" fill="#64748b">认准 4 针 I2C 版（丝印可能是</text>
+  <text x="464" y="378" font-size="8" fill="#64748b">SDA/SDI、SCL/SCK），7 针 SPI 版不适用</text>
+
+  <!-- ==================== 连线 ==================== -->
+  <g stroke-linecap="round">
+    <line x1="258" y1="214" x2="420" y2="214" stroke="#ef4444" stroke-width="3.4"/>
+    <line x1="258" y1="252" x2="420" y2="252" stroke="#334155" stroke-width="3.4"/>
+    <line x1="258" y1="290" x2="420" y2="290" stroke="#2563eb" stroke-width="3.4"/>
+    <line x1="258" y1="328" x2="420" y2="328" stroke="#16a34a" stroke-width="3.4"/>
+  </g>
+
+  <!-- 线缆标签 -->
+  <g font-size="10.5" font-weight="600" fill="#334155" text-anchor="middle">
+    <rect x="293" y="203" width="100" height="22" rx="11" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="343" y="218">3V3 → VCC</text>
+
+    <rect x="318" y="241" width="50" height="22" rx="11" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="343" y="256">GND</text>
+
+    <rect x="293" y="279" width="100" height="22" rx="11" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="343" y="294">GPIO21 · SDA</text>
+
+    <rect x="293" y="317" width="100" height="22" rx="11" fill="#ffffff" stroke="#e2e8f0"/>
+    <text x="343" y="332">GPIO22 · SCL</text>
+  </g>
+
+  <g font-size="7.5" fill="#94a3b8" text-anchor="middle">
+    <text x="343" y="194">红</text>
+    <text x="343" y="232">黑</text>
+    <text x="343" y="270">蓝</text>
+    <text x="343" y="308">绿</text>
+  </g>
+
+  <!-- ==================== 左卡：单键输入 ==================== -->
+  <rect x="40" y="418" width="352" height="300" rx="13" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="58" y="432" width="3" height="13" rx="1.5" fill="#f59e0b"/>
+  <text x="70" y="443" font-size="12.5" font-weight="700" fill="#0f172a">单键输入 · 板载 BOOT（GPIO0）</text>
+
+  <g font-size="8.5" fill="#475569">
+    <text x="58" y="463">BOOT 键一端接 GPIO0，一端接 GND，板上已有 10k 上拉。</text>
+    <text x="58" y="477">固件开 INPUT_PULLUP + 20ms 消抖，只认「按下」这一条边沿。</text>
+    <text x="58" y="491">所以不用外接按钮、电阻或面包板，烧录完直接按键就能玩。</text>
+  </g>
+
+  <!-- 等效电路 -->
+  <rect x="56" y="503" width="320" height="135" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-dasharray="4 3"/>
+  <text x="68" y="519" font-size="7.5" font-weight="700" fill="#94a3b8">板载 BOOT 电路（等效）</text>
+
+  <!-- 3V3 - 10k - 节点 - GPIO0 -->
+  <rect x="68" y="532" width="44" height="16" rx="3" fill="#fef3c7" stroke="#d97706"/>
+  <text x="90" y="543.5" font-size="8" font-weight="700" fill="#92400e" text-anchor="middle">3V3</text>
+  <line x1="112" y1="540" x2="126" y2="540" stroke="#d97706" stroke-width="1.8"/>
+  <path d="M126 540 l5 -6 l7 12 l7 -12 l7 12 l7 -12 l5 6" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linejoin="round"/>
+  <text x="143" y="527" font-size="7" fill="#94a3b8" text-anchor="middle">10k 板载</text>
+  <line x1="164" y1="540" x2="214" y2="540" stroke="#f59e0b" stroke-width="1.8"/>
+  <circle cx="186" cy="540" r="2.6" fill="#f59e0b"/>
+
+  <rect x="214" y="532" width="58" height="16" rx="3" fill="#fef3c7" stroke="#d97706"/>
+  <text x="243" y="543.5" font-size="8" font-weight="700" fill="#92400e" text-anchor="middle">GPIO0</text>
+
+  <!-- 节点下拉到按键再到 GND -->
+  <line x1="186" y1="542" x2="186" y2="568" stroke="#f59e0b" stroke-width="1.8"/>
+  <rect x="168" y="568" width="36" height="32" rx="5" fill="#334155" stroke="#475569"/>
+  <circle cx="186" cy="584" r="8" fill="#64748b" stroke="#94a3b8"/>
+  <circle cx="186" cy="584" r="3.4" fill="#334155"/>
+  <line x1="186" y1="600" x2="186" y2="614" stroke="#334155" stroke-width="1.8"/>
+  <rect x="160" y="614" width="52" height="16" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="186" y="625.5" font-size="8" font-weight="700" fill="#334155" text-anchor="middle">GND</text>
+
+  <text x="214" y="575" font-size="7.5" fill="#475569">按下 = GPIO0 拉低</text>
+  <text x="214" y="587" font-size="7.5" fill="#94a3b8">松开 = 10k 上拉回高</text>
+
+  <text x="58" y="654" font-size="8.5" fill="#b45309">⚠ 按住 BOOT 再点 EN / 复位 = 下载模式（正常现象）。</text>
+  <text x="58" y="670" font-size="8.5" fill="#64748b">运行中 BOOT 就是普通输入，可以放心按。</text>
+  <text x="58" y="692" font-size="8" fill="#94a3b8">按键手感调 BTN_DEBOUNCE_MS；外接按钮一端接 GPIO0、一端接 GND 即可。</text>
+  <text x="58" y="706" font-size="8" fill="#94a3b8">外接按钮和板载 BOOT 并联，效果完全一样。</text>
+
+  <!-- ==================== 右卡：30 pin 排针 ==================== -->
+  <rect x="408" y="418" width="352" height="300" rx="13" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="426" y="432" width="3" height="13" rx="1.5" fill="#2563eb"/>
+  <text x="438" y="443" font-size="12.5" font-weight="700" fill="#0f172a">30 pin 真实排针（天线朝上，USB 朝下）</text>
+
+  <text x="426" y="462" font-size="7.5" font-weight="700" fill="#94a3b8">左排 ↓</text>
+  <text x="608" y="462" font-size="7.5" font-weight="700" fill="#94a3b8">右排 ↓</text>
+
+  <!-- 左排 -->
+  <g font-size="7.5" text-anchor="middle">
+    <rect x="430" y="470" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="479" fill="#334155">EN</text>
+    <rect x="430" y="484" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="493" fill="#334155">VP</text>
+    <rect x="430" y="498" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="507" fill="#334155">VN</text>
+    <rect x="430" y="512" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="521" fill="#334155">D34</text>
+    <rect x="430" y="526" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="535" fill="#334155">D35</text>
+    <rect x="430" y="540" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="549" fill="#334155">D32</text>
+    <rect x="430" y="554" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="563" fill="#334155">D33</text>
+    <rect x="430" y="568" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="577" fill="#334155">D25</text>
+    <rect x="430" y="582" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="591" fill="#334155">D26</text>
+    <rect x="430" y="596" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="605" fill="#334155">D27</text>
+    <rect x="430" y="610" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="619" fill="#334155">D14</text>
+    <rect x="430" y="624" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="633" fill="#334155">D12</text>
+    <rect x="430" y="638" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="647" fill="#334155">D13</text>
+    <rect x="430" y="652" width="44" height="12" rx="3" fill="#fbbf24" stroke="#b45309"/>
+    <text x="452" y="661" fill="#111827" font-weight="700">GND</text>
+    <rect x="430" y="666" width="44" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="452" y="675" fill="#334155">VIN</text>
+  </g>
+
+  <!-- 板子朝向 -->
+  <rect x="492" y="474" width="100" height="196" rx="6" fill="#f8fafc" stroke="#dbe3f0"/>
+  <rect x="500" y="482" width="84" height="16" rx="2" fill="#e2e8f0"/>
+  <text x="542" y="493" font-size="6.5" fill="#94a3b8" text-anchor="middle">天线端 ↑</text>
+  <rect x="512" y="506" width="60" height="42" rx="2" fill="#cbd5e1" stroke="#94a3b8"/>
+  <text x="542" y="531" font-size="6.5" font-weight="700" fill="#475569" text-anchor="middle">WROOM-32</text>
+  <text x="542" y="592" font-size="7" fill="#cbd5e1" text-anchor="middle">30 pin</text>
+  <rect x="524" y="638" width="36" height="14" rx="3" fill="#94a3b8" stroke="#64748b"/>
+  <rect x="530" y="641" width="24" height="8" rx="1.5" fill="#475569"/>
+  <text x="542" y="664" font-size="6.5" fill="#94a3b8" text-anchor="middle">USB 端 ↓</text>
+
+  <!-- 右排 -->
+  <g font-size="7.5" text-anchor="middle">
+    <rect x="612" y="470" width="52" height="12" rx="3" fill="#fbbf24" stroke="#b45309"/>
+    <text x="638" y="479" font-weight="700" fill="#111827">3V3</text>
+    <rect x="612" y="484" width="52" height="12" rx="3" fill="#fbbf24" stroke="#b45309"/>
+    <text x="638" y="493" font-weight="700" fill="#111827">GND</text>
+    <rect x="612" y="498" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="507" fill="#334155">D15</text>
+    <rect x="612" y="512" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="521" fill="#334155">D2</text>
+    <rect x="612" y="526" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="535" fill="#334155">D4</text>
+    <rect x="612" y="540" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="549" fill="#334155">D16</text>
+    <rect x="612" y="554" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="563" fill="#334155">D17</text>
+    <rect x="612" y="568" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="577" fill="#334155">D5</text>
+    <rect x="612" y="582" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="591" fill="#334155">D18</text>
+    <rect x="612" y="596" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="605" fill="#334155">D19</text>
+    <rect x="612" y="610" width="52" height="12" rx="3" fill="#bfdbfe" stroke="#2563eb"/>
+    <text x="638" y="619" font-weight="700" fill="#1e3a8a">D21</text>
+    <rect x="612" y="624" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="633" fill="#334155">D3</text>
+    <rect x="612" y="638" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="647" fill="#334155">D1</text>
+    <rect x="612" y="652" width="52" height="12" rx="3" fill="#bbf7d0" stroke="#16a34a"/>
+    <text x="638" y="661" font-weight="700" fill="#14532d">D22</text>
+    <rect x="612" y="666" width="52" height="12" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="638" y="675" fill="#334155">D23</text>
+  </g>
+
+  <text x="426" y="694" font-size="7.5" fill="#64748b">高亮 = 本项目用到的脚：3V3、GND、D21（SDA）、D22（SCL）</text>
+  <text x="426" y="708" font-size="7.5" fill="#94a3b8">BOOT 是板载按键不是排针脚（GPIO0）；D21 / D22 中间隔着 D3(RX0) 和 D1(TX0)</text>
+
+  <!-- ==================== 备注 ==================== -->
+  <rect x="40" y="734" width="720" height="176" rx="13" fill="#ffffff" stroke="#e2e8f0"/>
+  <rect x="58" y="750" width="3" height="13" rx="1.5" fill="#16a34a"/>
+  <text x="70" y="761" font-size="12.5" font-weight="700" fill="#0f172a">接线要点 · 五句话</text>
+
+  <g font-size="10.5" fill="#475569">
+    <g fill="#94a3b8">
+      <circle cx="64" cy="781" r="2"/>
+      <circle cx="64" cy="805" r="2"/>
+      <circle cx="64" cy="829" r="2"/>
+      <circle cx="64" cy="853" r="2"/>
+      <circle cx="64" cy="877" r="2"/>
+    </g>
+
+    <text x="74" y="785">VCC 只接 <tspan font-weight="700" fill="#b45309">3V3</tspan>（右排最上面那根），接 5V / VIN 会烧屏；GND 用右排第二个，必须共地</text>
+    <text x="74" y="809">SDA = <tspan font-weight="700" fill="#1d4ed8">GPIO21</tspan>，SCL = <tspan font-weight="700" fill="#15803d">GPIO22</tspan>：ESP32 默认 I2C 脚，两脚中间隔着 RX0(3) / TX0(1)</text>
+    <text x="74" y="833">板载 <tspan font-weight="700" fill="#b45309">BOOT = GPIO0</tspan> 直接当游戏键，不用外接按钮；按住 BOOT 再复位会进下载模式</text>
+    <text x="74" y="857">别占用 <tspan font-weight="700" fill="#b91c1c">GPIO2</tspan>（板载 LED）、12/15（strapping）、6–11（Flash）、1/3（串口）、34–39（只输入、无上拉）</text>
+    <text x="74" y="881">400kHz I2C 下全屏刷新约 25ms，逻辑固定 30fps；USB 供电即可，整机约 40mA</text>
+  </g>
+
+  <!-- ==================== 页脚 ==================== -->
+  <text x="40" y="930" font-size="9" fill="#94a3b8">断电后接线 · 上电前复查 VCC / GND</text>
+  <text x="760" y="930" font-size="9" fill="#94a3b8" text-anchor="end">esp32-flappy-bird · docs/wiring.svg</text>
+</svg>

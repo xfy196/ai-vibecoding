@@ -1,0 +1,7 @@
+.pio/
+.vscode/
+firmware/src/secrets.h
+firmware/src/certs.h
+firmware/platformio.local.ini
+*.bin
+*.elf
