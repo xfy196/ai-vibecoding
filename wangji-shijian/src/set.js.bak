@@ -1,0 +1,267 @@
+// set.js — 《忘记时间》MV 的共享世界、角色与道具。所有 chapter 共用。
+// 规则：只用水彩块面（paint 的 fill/wash）+ 墨线；纯 2D；每帧都是 t 的纯函数；
+// 每个独立元素前调用 boilSeed（这里统一走 boil(key)），否则会整片抖。
+// 构图：歌词条占 y≈975–1070，主要动作全部压在 y < 940。
+const SET = (() => {
+  // ---------- 本片的调色板 ----------
+  const C = {
+    paper: PAL.paper, ink: PAL.ink,
+    night: '#20264E', indigo: '#2F3C7A', dusk: '#3D4478', duskLt: '#7C7EAC',
+    violet: '#7B5CA8', teal: '#3A9C98', tealDk: '#2A6E77', sap: '#6E9F58',
+    ochre: '#E8AA38', gold: '#F2C55E', rose: '#E27A92', roseLt: '#F0A8B4',
+    cream: '#FFF5E2', red: '#C0392B', dawn: '#F7E2C8', sky: '#8EC3E6',
+    him: PAL.clay, himDk: PAL.clayDk, himLt: '#F5B394',
+    her: '#BBD3E6', herDk: '#7E9CBC', herLt: '#E8F2FA',
+  };
+  const boil = k => boilSeed(k);
+  // 把颜色朝背景色混过去，代替透明度（p5.brush 的墨线没有 alpha）
+  const fade = (col, bg, k) => mixCol(col, bg, clamp(k));
+
+  // ---------- 天空 ----------
+  // 纸就是底：只用半透明水彩块面往上叠，纸纹始终透出来。
+  // 一块柔和的晕染（带抖动边和颗粒），fills 的最基本单位。
+  function mass(cx, cy, rx, ry, col, op, key, o = {}) {
+    boil(key);
+    paint(ellPts(cx, cy, rx, ry, 26, o.j ?? 20),
+      { fill: col, fillOp: op, bleed: o.bleed ?? .34, tex: o.tex ?? .55, border: o.border ?? .5, ink: null });
+  }
+  // 底色一层平涂 + 低透明度的平涂椭圆叠出冷暖渐变（wash 很便宜，fill 按面积算钱），
+  // 最后只留**一次**水彩 fill 做纸面质感——这样一整个天空只花一次水彩的钱。
+  function sky(t, o = {}) {
+    const hz = o.hz ?? .84;
+    boil('sky.base');
+    paint(rectPts(-900, -900, W + 1800, H + 1800), { wash: o.base ?? '#CBD6E8', washOp: o.baseOp ?? 175, ink: null });
+    if (o.top) { boil('sky.top'); paint(ellPts(W * .5, -H * .10, W * 1.3, H * .60, 30, 26), { wash: o.top, washOp: o.topOp ?? 70, ink: null }); }
+    if (o.mid) { boil('sky.mid'); paint(ellPts(W * .5, H * .42, W * 1.2, H * .42, 30, 26), { wash: o.mid, washOp: o.midOp ?? 45, ink: null }); }
+    if (o.warm) { boil('sky.warm'); paint(ellPts(W * .5, H * hz, W * 1.15, H * .26, 30, 26), { wash: o.warm, washOp: o.warmOp ?? 60, ink: null }); }
+    if (o.cool) { boil('sky.cool'); paint(ellPts(W * .5, H * (hz + .30), W * 1.2, H * .26, 30, 26), { wash: o.cool, washOp: o.coolOp ?? 45, ink: null }); }
+    if (o.tex !== false) {
+      boil('sky.tex');
+      paint(ellPts(W * .5, H * .44, W * 1.1, H * .62, 22, 34), { fill: o.texCol || o.top || '#3A569F', fillOp: o.texOp ?? 110, bleed: .38, tex: .62, border: .6, ink: null });
+    }
+    return hz * H;
+  }
+
+  // ---------- 云 ----------
+  // 一条湿云带，随 t 慢慢漂。seed 决定形状。
+  function cloud(x, y, w, h, col, seed, t, op = 130) {
+    boil('cloud' + seed);
+    const pts = [], n = 9;
+    for (let i = 0; i <= n; i++) { const u = i / n; pts.push([x - w / 2 + w * u, y + Math.sin(u * 7 + seed) * h * .18 - h * .5 * Math.sin(u * Math.PI)]); }
+    for (let i = n; i >= 0; i--) { const u = i / n; pts.push([x - w / 2 + w * u, y + h * .55 + Math.sin(u * 5 + seed * 2) * h * .2]); }
+    paint(pts, { fill: col, fillOp: op, bleed: .3, tex: .45, border: .5, ink: null });
+  }
+
+  // ---------- 远山 / 丘陵 ----------
+  // layers: [{ cx, cy, rx, ry, col, tufts?, ink? }]，从远到近画。
+  function hills(t, layers) {
+    layers.forEach((L, i) => {
+      boil('hill' + i);
+      paint(ellPts(L.cx, L.cy, L.rx, L.ry, 40, L.j ?? 3),
+        { wash: L.col, washOp: L.washOp ?? 240, fill: mixCol(L.col, C.night, .45), fillOp: L.fillOp ?? 95, bleed: .12, tex: .55, border: .45,
+          ink: L.ink === null ? null : (L.ink || C.ink), sw: L.sw ?? .9 });
+      if (L.tufts) tufts(t, L.cx, L.cy, L.rx, L.ry, L.tufts, L.col);
+    });
+  }
+  // 山脊上的草：几笔细墨线，随风摆
+  function tufts(t, cx, cy, rx, ry, n, col) {
+    for (let i = 0; i < n; i++) {
+      const a = -Math.PI / 2 + (hash(i + cx) - .5) * 1.7, x = cx + Math.cos(a) * rx, y = cy + Math.sin(a) * ry + 3;
+      const sw = wob(t, .5, hash(i) * 3) * 6;
+      boil('tuft' + i);
+      for (const k of [-1, 0, 1]) inkLine([[x + k * 8, y], [x + k * 12 + sw, y - 24 - 10 * hash(i + k)]], .7, mixCol(col, C.cream, .4), 'inkfine', .4);
+    }
+  }
+
+  // ---------- 地 / 路 ----------
+  // 一块从 y 铺到画面底的地面，上缘带一点抖动。
+  function ground(t, y, col, o = {}) {
+    boil('ground');
+    const pts = [[-900, y]];
+    for (let i = 0; i <= 8; i++) pts.push([-900 + (W + 1800) * i / 8, y + Math.sin(i * 1.7 + (o.seed || 0)) * 6 + jit(2)]);
+    pts.push([W + 900, H + 900], [-900, H + 900]);
+    paint(pts, { wash: col, washOp: o.washOp ?? 240, fill: mixCol(col, C.night, .4), fillOp: o.fillOp ?? 110, bleed: .06, tex: .5, border: .4, ink: null });
+    if (o.edge !== false) { boil('ground.edge'); inkLine([[-900, y], [W * .5, y - 4], [W + 900, y + 2]], o.sw ?? 1, o.edgeCol || C.ink, 'ink', .5); }
+  }
+  // 一条从 (x0,y0) 宽 w0 收窄到 (x1,y1) 宽 w1 的路
+  function road(x0, y0, w0, x1, y1, w1, col, o = {}) {
+    boil('road');
+    const pts = [[x0 - w0 / 2, y0], [x1 - w1 / 2, y1], [x1 + w1 / 2, y1], [x0 + w0 / 2, y0]];
+    paint(pts, { wash: col, washOp: o.washOp ?? 235, fill: col, fillOp: o.fillOp ?? 90, bleed: .14, tex: .5, border: .5, ink: o.ink === null ? null : (o.ink || C.ink), sw: o.sw ?? .8 });
+  }
+
+  // ---------- 雨 ----------
+  // 斜雨：一排细墨线，落得比 t 快。dir = 倾斜方向。
+  function rain(t, o = {}) {
+    const n = o.n ?? 46, a = o.ang ?? .22, len = o.len ?? 46, sp = o.speed ?? 900;
+    for (let i = 0; i < n; i++) {
+      boil('rain' + i);
+      const x0 = hash(i) * (W + 400) - 200, ph = frac(hash(i + 50) + t * sp / (H + 200));
+      const y = ph * (H + 260) - 130;
+      const al = .35 + .5 * hash(i + 90);
+      inkLine([[x0, y], [x0 + len * a, y + len]], (o.sw ?? .8) * (.7 + .6 * al), fade(o.col || C.duskLt, o.bg || C.night, 1 - al * .8), 'inkfine', .2);
+    }
+  }
+  // 雨打在水面上的小圈
+  function rainRings(t, y, o = {}) {
+    const n = o.n ?? 9;
+    for (let i = 0; i < n; i++) {
+      boil('ring' + i);
+      const ph = frac(hash(i + 7) + t * (o.speed ?? .7)), r = 6 + 46 * ph;
+      const x = hash(i + 31) * W;
+      const col = fade(o.col || C.teal, o.bg || C.night, .35 + .5 * ph);
+      inkLine(ellPts(x, y + hash(i + 3) * 40, r, r * .28, 16), .8 * (1 - ph), col, 'inkfine', .5);
+    }
+  }
+
+  // ---------- 钟 ----------
+  // 天上的巨钟。hand = 指针走过的"圈数"（可以是负数 = 倒着走）。fade 0..1 往 bg 褪。
+  function clock(x, y, r, t, o = {}) {
+    const f = clamp(o.fade ?? 0), bg = o.bg || C.dusk;
+    const face = fade(o.face || C.cream, bg, .25 + .7 * f);
+    const mark = fade(C.ink, bg, .35 + .62 * f);
+    boil('clock.face');
+    paint(ellPts(x, y, r, r, 40, r * .012), { wash: face, washOp: o.washOp ?? 210, fill: o.face || C.cream, fillOp: o.fillOp ?? 90 * (1 - .6 * f), bleed: .16, tex: .45, border: .4, ink: mark, sw: o.sw ?? 1.5 });
+    const sw = clamp(r / 220, .5, 1.6);
+    if (o.ticks !== false) {
+      boil('clock.ticks');
+      for (let i = 0; i < 12; i++) {
+        const a = i / 12 * TAU - Math.PI / 2, k = i % 3 === 0 ? .82 : .88;
+        inkLine([[x + Math.cos(a) * r * k, y + Math.sin(a) * r * k], [x + Math.cos(a) * r * .97, y + Math.sin(a) * r * .97]],
+          sw * (i % 3 === 0 ? 1.5 : .9), mark, 'ink', 0);
+      }
+    }
+    // 指针：分针走 hand 圈，时针走 hand/12 圈
+    const hands = [[o.hand ?? 0, .72, 1.4], [(o.hand ?? 0) / 12, .46, 2.0]];
+    boil('clock.hands');
+    for (const [turnN, len, wgt] of hands) {
+      const a = turnN * TAU - Math.PI / 2;
+      inkLine([[x - Math.cos(a) * r * .08, y - Math.sin(a) * r * .08], [x + Math.cos(a) * r * len, y + Math.sin(a) * r * len]], sw * wgt, mark, 'ink', 0);
+    }
+    boil('clock.pin');
+    paint(ellPts(x, y, r * .035, r * .035, 10), { wash: mark, ink: null });
+  }
+
+  // ---------- 枫叶 ----------
+  // 一片枫叶：(x,y) 叶心，r 半径，rot 转角。掉下来/飘上去都靠调用方给位置。
+  function leaf(x, y, r, rot, o = {}) {
+    const col = o.col || C.ochre, dark = o.dark || mixCol(C.ochre, C.red, .45);
+    boil(o.key || 'leaf');
+    push(); translate(x, y); rotate(rot);
+    const pts = [];
+    for (let i = 0; i < 10; i++) {           // 5 个尖 5 个凹
+      const a = i / 10 * TAU - Math.PI / 2, q = i % 2 ? r * .42 : r * (i === 0 ? 1 : .92);
+      pts.push([Math.cos(a) * q, Math.sin(a) * q]);
+    }
+    paint(pts, { wash: col, fill: dark, fillOp: 70, bleed: .1, tex: .5, ink: o.ink === null ? null : (o.ink || C.ink), sw: clamp(r / 26, .5, 1.3), curv: .3 });
+    inkLine([[0, 0], [0, r * .95]], clamp(r / 34, .4, 1.1), o.ink || C.ink, 'ink', 0);   // 叶脉/叶柄
+    pop();
+  }
+
+  // ---------- 花瓣 ----------
+  function petal(x, y, r, rot, col, o = {}) {
+    boil(o.key || 'petal');
+    paint(ellPts(x, y, r, r * .58, 12, r * .05, rot), { wash: col, washOp: o.op ?? 235, ink: o.ink === null ? null : fade(o.ink || C.ink, col, .55), sw: .7 });
+  }
+
+  // ---------- 星 ----------
+  function star(x, y, r, tw, col, o = {}) {
+    boil(o.key || 'star');
+    paint(starPts(x, y, r * tw, .34, o.n || 4, (o.rot || 0) + tw * .3), { wash: col, washOp: o.op ?? 240, ink: null });
+  }
+
+  // ---------- 鸟 ----------
+  // 两只小翅膀的简笔鸟，扇翅相位不同。
+  function bird(x, y, s, t, ph, col) {
+    boil('bird' + ph);
+    const k = Math.sin(t * 9 + ph) * .5;
+    inkLine([[x - s, y - s * .3 * k], [x - s * .4, y - s * .5], [x, y]], 1, col, 'ink', .5);
+    inkLine([[x, y], [x + s * .4, y - s * .5], [x + s, y - s * .3 * k]], 1, col, 'ink', .5);
+  }
+
+  // ---------- 她 ----------
+  // 奶油淡蓝的小 Clawd。o 里可以放任何 clawd() 选项。
+  function her(x, y, u, o = {}) {
+    return clawd(x, y, u, { col: C.her, dk: C.herDk, lt: C.herLt, ...o });
+  }
+  // 他
+  function him(x, y, u, o = {}) {
+    return clawd(x, y, u, { col: C.him, dk: C.himDk, lt: C.himLt, ...o });
+  }
+
+  // ---------- 红线 ----------
+  // 一根用 ribbon 画的红线。P = 点列，w = 粗。松的时候自然下垂，用 sag 给中点加重量。
+  function thread(P, w, o = {}) {
+    boil(o.key || 'thread');
+    const pts = [];
+    for (let i = 0; i < P.length; i++) {
+      const p = P[i], u = P.length > 1 ? i / (P.length - 1) : 0;
+      const sag = (o.sag || 0) * 4 * u * (1 - u);
+      pts.push([p[0], p[1] + sag]);
+    }
+    const C2 = through(pts, 5);
+    paint(ribbon(C2, w, w * .8), { wash: o.col || C.red, ink: o.ink === null ? null : (o.ink || mixCol(C.red, C.ink, .5)), sw: .8 });
+  }
+
+  // ---------- 水 ----------
+  // 一片水面：一条横向的水彩带 + 几道横向墨线（波纹）+ 若干闪光。
+  function water(t, y, col, o = {}) {
+    boil('water');
+    const pts = [[-900, y]];
+    for (let i = 0; i <= 10; i++) pts.push([-900 + (W + 1800) * i / 10, y + Math.sin(i * 1.3 + (o.seed || 0)) * 5 + jit(2)]);
+    pts.push([W + 900, H + 900], [-900, H + 900]);
+    paint(pts, { wash: col, washOp: o.washOp ?? 200, fill: o.fill || mixCol(col, C.cream, .35), fillOp: o.fillOp ?? 95, bleed: .12, tex: .55, border: .45, ink: null });
+    for (let i = 0; i < (o.lines ?? 7); i++) {
+      boil('wline' + i);
+      const yy = y + 18 + i * (o.gap ?? 34) + Math.sin(t * .8 + i) * 3, w = (W + 200) * (.5 + .5 * hash(i + 4));
+      inkLine([[-100, yy], [W / 2 + jit(8), yy + 3], [W + 100, yy]], .7 + .3 * hash(i), fade(o.lineCol || C.duskLt, col, .25), 'inkfine', .5);
+    }
+  }
+
+  // ---------- 星野 ----------
+  function starField(t, n, o = {}) {
+    for (let i = 0; i < n; i++) {
+      const x = hash(i + (o.seed || 0)) * (W + 240) - 120, y = hash(i + 100 + (o.seed || 0)) * (o.h ?? H * .62);
+      const tw = .5 + .5 * Math.sin(t * (1.6 + 2 * hash(i + 300)) + i);
+      boil('sf' + i);
+      paint(starPts(x, y, (o.r ?? 5) * (.6 + .7 * hash(i + 200)) * (.75 + .35 * tw), .34, 4, tw), { wash: o.col || C.cream, washOp: o.op ?? 235, ink: null });
+    }
+  }
+
+  // ---------- 飘落的花瓣 ----------
+  function petalFall(t, n, o = {}) {
+    for (let i = 0; i < n; i++) {
+      const sp = o.sp ?? 60, ph = frac(hash(i + 11) + t * sp / (H + 260));
+      const y = lerp(o.y0 ?? -120, o.y1 ?? H + 120, ph);
+      const x = lerp(o.x0 ?? -100, o.x1 ?? W + 100, hash(i + 31)) + Math.sin(t * .9 + i) * (o.sway ?? 60);
+      petal(x, y, (o.r ?? 15) * (.6 + .7 * hash(i + 7)), t * .8 + i, o.col || C.roseLt, { key: 'pf' + i });
+    }
+  }
+
+  // ---------- 灯笼 ----------
+  function lantern(x, y, r, t, o = {}) {
+    const sw = Math.sin(t * 1.3 + (o.ph || 0)) * .08;
+    glow(x, y, r * (o.glow ?? 3.4), o.col || '#FFCE7A', o.glowA ?? .85);
+    push(); translate(x, y); rotate(sw);
+    boil('lantern' + (o.key || ''));
+    paint(ellPts(0, 0, r, r * 1.12, 22, 1.2), { wash: o.col2 || '#F2A05A', fill: '#FFD98F', fillOp: 150, bleed: .16, tex: .5, ink: C.ink, sw: .9 });
+    inkLine([[0, -r * 1.12], [0, -r * 1.5]], .9, C.ink, 'ink', 0);
+    inkLine([[-r * .8, r * 1.05], [r * .8, r * 1.05]], .9, C.ink, 'ink', 0);
+    pop();
+  }
+
+  // ---------- 小工具 ----------
+  // 从 a 到 b 的二段式路径（带一点弧度），给红线 / 光路用
+  function arcP(a, b, bend, n = 5) {
+    const out = [];
+    for (let i = 0; i <= n; i++) {
+      const u = i / n, p = arcPt(a, b, bend, u);
+      out.push(p);
+    }
+    return out;
+  }
+  // 一束柔光（画在要照亮的物体之前）
+  function light(x, y, r, col, a) { glow(x, y, r, col, a); }
+
+  return { C, boil, fade, sky, cloud, hills, tufts, ground, road, rain, rainRings, clock, leaf, petal, star, bird, her, him, thread, arcP, light, water, starField, petalFall, lantern, mass };
+})();
