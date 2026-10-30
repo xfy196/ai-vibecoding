@@ -1,0 +1,232 @@
+<template>
+<style>
+
+  @font-face {
+    font-family: "Zpix";
+    src: url("assets/fonts/zpix.woff2") format("woff2");
+    font-display: block;
+  }
+  #root {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #070613;
+    font-family: "Zpix", monospace;
+    -webkit-font-smoothing: none;
+    text-rendering: geometricPrecision;
+  }
+  .blk { position: absolute; }
+  .t { white-space: pre; }
+  .ch { white-space: pre; }
+  .spr { background-repeat: repeat-x; image-rendering: pixelated; }
+  .clip { position: absolute; inset: 0; }
+  .scan {
+    position: absolute; inset: 0; pointer-events: none;
+    background: repeating-linear-gradient(to bottom, rgba(4,3,12,0.22) 0px, rgba(4,3,12,0.22) 4px, rgba(4,3,12,0) 4px, rgba(4,3,12,0) 8px);
+  }
+  .dith {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: repeating-conic-gradient(rgba(6,5,16,0.55) 0% 25%, rgba(6,5,16,0) 0% 50%);
+    background-size: 8px 8px;
+  }
+  .glow { box-shadow: 0 0 24px 8px rgba(105,240,210,0.16); }
+
+
+</style>
+<div id="root" data-composition-id="s07-build" data-width="1920" data-height="1080">
+
+<div id="s07-c1" class="clip" data-start="0.00" data-duration="2.86" data-track-index="2" data-layout-allow-overflow>
+  <div id="s07-cam1" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 62%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#070612;"></div>
+    <div class="blk" style="left:240px;top:880px;width:936px;height:36px;background:#241d50"></div><div class="blk" style="left:348px;top:808px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:492px;top:808px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:636px;top:808px;width:108px;height:72px;background:#3d3180"></div><div class="blk" style="left:780px;top:808px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:924px;top:808px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:1068px;top:808px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:240px;top:916px;width:936px;height:216px;background:#121030"></div><div class="blk" style="left:240px;top:664px;width:144px;height:288px;background:#5a49a8"></div><div class="blk" style="left:348px;top:628px;width:432px;height:252px;background:#f2c9a1"></div><div class="blk" style="left:384px;top:844px;width:360px;height:36px;background:#cf9f78"></div><div id="s07h1a-finger" class="blk" style="left:456px;top:484px;width:72px;height:180px;background:#f2c9a1"></div><div id="s07h1a-mid" class="blk" style="left:564px;top:520px;width:72px;height:144px;background:#f2c9a1"></div><div id="s07h1a-ring" class="blk" style="left:672px;top:556px;width:72px;height:108px;background:#f2c9a1"></div><div id="s07h1a-pinky" class="blk" style="left:744px;top:628px;width:72px;height:72px;background:#f2c9a1"></div><div class="blk" style="left:312px;top:736px;width:72px;height:108px;background:#cf9f78"></div><div id="s07h1a-keylight" class="blk" style="left:600px;top:808px;width:108px;height:36px;background:#69f0d2"></div>
+    <div id="s07-h1b" class="blk" style="left:1200px;top:520px;width:936px;height:504px;transform:scaleX(-1)">
+      <div class="blk" style="left:0px;top:360px;width:936px;height:36px;background:#241d50"></div><div class="blk" style="left:108px;top:288px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:252px;top:288px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:396px;top:288px;width:108px;height:72px;background:#3d3180"></div><div class="blk" style="left:540px;top:288px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:684px;top:288px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:828px;top:288px;width:108px;height:72px;background:#312868"></div><div class="blk" style="left:0px;top:396px;width:936px;height:216px;background:#121030"></div><div class="blk" style="left:0px;top:144px;width:144px;height:288px;background:#5a49a8"></div><div class="blk" style="left:108px;top:108px;width:432px;height:252px;background:#f2c9a1"></div><div class="blk" style="left:144px;top:324px;width:360px;height:36px;background:#cf9f78"></div><div id="s07h1b-finger" class="blk" style="left:216px;top:-36px;width:72px;height:180px;background:#f2c9a1"></div><div id="s07h1b-mid" class="blk" style="left:324px;top:0px;width:72px;height:144px;background:#f2c9a1"></div><div id="s07h1b-ring" class="blk" style="left:432px;top:36px;width:72px;height:108px;background:#f2c9a1"></div><div id="s07h1b-pinky" class="blk" style="left:504px;top:108px;width:72px;height:72px;background:#f2c9a1"></div><div class="blk" style="left:72px;top:216px;width:72px;height:108px;background:#cf9f78"></div><div id="s07h1b-keylight" class="blk" style="left:360px;top:288px;width:108px;height:36px;background:#69f0d2"></div>
+    </div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+<div id="s07-c2" class="clip" data-start="2.86" data-duration="2.86" data-track-index="3" data-layout-allow-overflow>
+  <div id="s07-cam2" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:46% 44%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#070612;"></div>
+    <div class="blk" style="left:360px;top:200px;width:400px;height:640px;background:#2a2347"></div><div class="blk" style="left:440px;top:80px;width:800px;height:240px;background:#2a2347"></div><div class="blk" style="left:560px;top:120px;width:480px;height:40px;background:#3d3566"></div><div class="blk" style="left:720px;top:320px;width:80px;height:360px;background:#2a2347"></div><div class="blk" style="left:760px;top:280px;width:560px;height:440px;background:#f2c9a1"></div><div class="blk" style="left:800px;top:680px;width:480px;height:120px;background:#cf9f78"></div><div class="blk" style="left:880px;top:760px;width:360px;height:80px;background:#f2c9a1"></div><div class="blk" style="left:1240px;top:560px;width:80px;height:120px;background:#f2c9a1"></div><div class="blk" style="left:1280px;top:640px;width:40px;height:40px;background:#cf9f78"></div><div class="blk" style="left:960px;top:840px;width:200px;height:40px;background:#5a4a6e"></div><div class="blk" style="left:800px;top:880px;width:360px;height:160px;background:#cf9f78"></div><div class="blk" style="left:560px;top:480px;width:120px;height:200px;background:#5a49a8"></div><div class="blk" style="left:480px;top:440px;width:240px;height:80px;background:#69f0d2"></div><div class="blk" style="left:520px;top:600px;width:160px;height:40px;background:#23b39a"></div><div class="blk" style="left:920px;top:480px;width:320px;height:40px;background:#2a2347"></div><div class="blk" style="left:960px;top:520px;width:240px;height:40px;background:#0a0918"></div><div class="blk" style="left:1000px;top:560px;width:200px;height:40px;background:#f7f2e2"></div><div class="blk" style="left:1040px;top:560px;width:80px;height:40px;background:#69f0d2"></div><div id="s07f2-eye-o" class="blk" style="left:960px;top:520px;width:240px;height:80px;background:rgba(0,0,0,0)"></div><div id="s07f2-eye-h" class="blk" style="left:960px;top:560px;width:240px;height:40px;background:#0a0918"></div><div id="s07f2-eye-c" class="blk" style="left:920px;top:560px;width:280px;height:40px;background:#0a0918"></div><div id="s07f2-rim" class="blk" style="left:1320px;top:320px;width:40px;height:480px;background:rgba(105,240,210,0.55)"></div><div id="s07f2-rim2" class="blk" style="left:1320px;top:800px;width:40px;height:160px;background:rgba(105,240,210,0.22)"></div><div id="s07f2-mouth" class="blk" style="left:1080px;top:760px;width:160px;height:40px;background:#a8705c"></div>
+    <div id="s07-ha2" class="blk" style="left:1000px;top:480px;width:320px;height:240px;background:#f2c9a1"></div>
+    <div id="s07-ha2b" class="blk" style="left:1000px;top:464px;width:320px;height:32px;background:#d3a077"></div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+<div id="s07-c3" class="clip" data-start="5.72" data-duration="2.86" data-track-index="4" data-layout-allow-overflow>
+  <div id="s07-cam3" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 64%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#070612;"></div>
+    <div class="blk" style="left:360px;top:880px;width:1040px;height:40px;background:#241d50"></div><div class="blk" style="left:480px;top:800px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:640px;top:800px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:800px;top:800px;width:120px;height:80px;background:#3d3180"></div><div class="blk" style="left:960px;top:800px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:1120px;top:800px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:1280px;top:800px;width:120px;height:80px;background:#312868"></div><div class="blk" style="left:360px;top:920px;width:1040px;height:240px;background:#121030"></div><div class="blk" style="left:360px;top:640px;width:160px;height:320px;background:#5a49a8"></div><div class="blk" style="left:480px;top:600px;width:480px;height:280px;background:#f2c9a1"></div><div class="blk" style="left:520px;top:840px;width:400px;height:40px;background:#cf9f78"></div><div id="s07h3-finger" class="blk" style="left:600px;top:440px;width:80px;height:200px;background:#f2c9a1"></div><div id="s07h3-mid" class="blk" style="left:720px;top:480px;width:80px;height:160px;background:#f2c9a1"></div><div id="s07h3-ring" class="blk" style="left:840px;top:520px;width:80px;height:120px;background:#f2c9a1"></div><div id="s07h3-pinky" class="blk" style="left:920px;top:600px;width:80px;height:80px;background:#f2c9a1"></div><div class="blk" style="left:440px;top:720px;width:80px;height:120px;background:#cf9f78"></div><div id="s07h3-keylight" class="blk" style="left:760px;top:800px;width:120px;height:40px;background:#69f0d2"></div>
+    <div id="s07-green" class="blk" style="left:0;top:0;width:1920px;height:1080px;background:#23b39a;opacity:0"></div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+<div id="s07-c4" class="clip" data-start="8.58" data-duration="2.86" data-track-index="5" data-layout-allow-overflow>
+  <div id="s07-cam4" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 40%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#070612;"></div>
+    <div class="blk" style="left:440px;top:228px;width:360px;height:576px;background:#2a2347"></div><div class="blk" style="left:512px;top:120px;width:720px;height:216px;background:#2a2347"></div><div class="blk" style="left:620px;top:156px;width:432px;height:36px;background:#3d3566"></div><div class="blk" style="left:764px;top:336px;width:72px;height:324px;background:#2a2347"></div><div class="blk" style="left:800px;top:300px;width:504px;height:396px;background:#f2c9a1"></div><div class="blk" style="left:836px;top:660px;width:432px;height:108px;background:#cf9f78"></div><div class="blk" style="left:908px;top:732px;width:324px;height:72px;background:#f2c9a1"></div><div class="blk" style="left:1232px;top:552px;width:72px;height:108px;background:#f2c9a1"></div><div class="blk" style="left:1268px;top:624px;width:36px;height:36px;background:#cf9f78"></div><div class="blk" style="left:980px;top:804px;width:180px;height:36px;background:#5a4a6e"></div><div class="blk" style="left:836px;top:840px;width:324px;height:144px;background:#cf9f78"></div><div class="blk" style="left:620px;top:480px;width:108px;height:180px;background:#5a49a8"></div><div class="blk" style="left:548px;top:444px;width:216px;height:72px;background:#69f0d2"></div><div class="blk" style="left:584px;top:588px;width:144px;height:36px;background:#23b39a"></div><div class="blk" style="left:944px;top:444px;width:288px;height:36px;background:#2a2347"></div><div class="blk" style="left:980px;top:516px;width:216px;height:36px;background:#0a0918"></div><div class="blk" style="left:1016px;top:552px;width:180px;height:36px;background:#f7f2e2"></div><div class="blk" style="left:1052px;top:552px;width:72px;height:36px;background:#69f0d2"></div><div id="s07f4-eye-o" class="blk" style="left:980px;top:516px;width:216px;height:72px;background:rgba(0,0,0,0)"></div><div id="s07f4-eye-h" class="blk" style="left:980px;top:552px;width:216px;height:36px;background:#0a0918"></div><div id="s07f4-eye-c" class="blk" style="left:944px;top:552px;width:252px;height:36px;background:#0a0918"></div><div id="s07f4-rim" class="blk" style="left:1304px;top:336px;width:36px;height:432px;background:rgba(105,240,210,0.55)"></div><div id="s07f4-rim2" class="blk" style="left:1304px;top:768px;width:36px;height:144px;background:rgba(105,240,210,0.22)"></div><div id="s07f4-mouth" class="blk" style="left:1088px;top:732px;width:144px;height:36px;background:#a8705c"></div>
+    <div id="s07-cup" class="blk" style="left:760px;top:840px;width:240px;height:224px">
+      <div class="blk" style="left:0px;top:0px;width:240px;height:224px;background:#ded7c4;"></div>
+      <div class="blk" style="left:32px;top:24px;width:176px;height:32px;background:#6d3a28;"></div>
+      <div class="blk" style="left:240px;top:48px;width:40px;height:80px;background:#ded7c4;"></div>
+    </div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+<div id="s07-sh5" class="clip" data-start="11.44" data-duration="10.00" data-track-index="6" data-layout-allow-overflow>
+  <div id="s07-cam5" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 54%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#08071a;"></div>
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:760px;background:#0d0b26;"></div>
+    <div class="blk" style="left:160px;top:160px;width:360px;height:280px;background:#241d50;"></div><div class="blk" style="left:176px;top:176px;width:328px;height:248px;background:#050710;"></div>
+    <div class="blk" style="left:600px;top:120px;width:400px;height:320px;background:#241d50;"></div><div class="blk" style="left:616px;top:136px;width:368px;height:288px;background:#050710;"></div>
+    <div class="blk" style="left:1080px;top:184px;width:320px;height:256px;background:#241d50;"></div><div class="blk" style="left:1096px;top:200px;width:288px;height:224px;background:#050710;"></div>
+    <div class="blk" style="left:0px;top:760px;width:1920px;height:320px;background:#07061a;"></div>
+    <div class="blk" style="left:96px;top:632px;width:1280px;height:32px;background:#312868;"></div>
+    <div class="blk" style="left:96px;top:664px;width:1280px;height:120px;background:#1b1638;"></div>
+    <div id="s07-rock" class="blk" style="left:520px;top:280px;width:0;height:0;transform-origin:50% 100%">
+      <div id="s07-dev5" class="blk spr" style="left:0px;top:0px;width:576px;height:640px;background-image:url(assets/sprites/hero-back.svg);background-size:1152px 640px;background-position:0 0;"></div>
+    </div>
+    <div id="s07-cat5" class="blk" style="left:1200px;top:640px;width:96px;height:64px">
+      <div class="blk spr" style="left:0px;top:0px;width:96px;height:64px;background-image:url(assets/sprites/cat.svg);background-size:192px 64px;background-position:0 0;"></div>
+    </div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+<div id="s07-sh6" class="clip" data-start="21.44" data-duration="9.41" data-track-index="2" data-layout-allow-overflow>
+  <div id="s07-cam6" class="blk" style="left:0;top:0;width:1920px;height:1080px;transform-origin:50% 48%;">
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:1080px;background:#08071a;"></div>
+    <div class="blk" style="left:0px;top:0px;width:1920px;height:784px;background:#0d0b26;"></div>
+    <div class="blk" style="left:240px;top:160px;width:560px;height:360px;background:#241d50;"></div><div class="blk" style="left:256px;top:176px;width:528px;height:328px;background:#050710;"></div>
+    <div class="blk" style="left:880px;top:136px;width:480px;height:384px;background:#241d50;"></div><div class="blk" style="left:896px;top:152px;width:432px;height:352px;background:#050710;"></div>
+    <div class="blk" style="left:1440px;top:176px;width:320px;height:344px;background:#241d50;"></div><div class="blk" style="left:1456px;top:192px;width:288px;height:312px;background:#050710;"></div>
+    <div class="blk" style="left:272px;top:480px;width:496px;height:24px;background:#312868;"></div><div class="blk" style="left:912px;top:448px;width:400px;height:24px;background:#312868;"></div><div class="blk" style="left:1472px;top:480px;width:256px;height:24px;background:#312868;"></div>
+    <div class="blk" style="left:0px;top:784px;width:1920px;height:296px;background:#07061a;"></div>
+    <div class="blk" style="left:96px;top:672px;width:1280px;height:32px;background:#312868;"></div>
+    <div class="blk" style="left:96px;top:704px;width:1280px;height:120px;background:#1b1638;"></div>
+    <div id="s07-dev6" class="blk spr" style="left:480px;top:296px;width:576px;height:640px;background-image:url(assets/sprites/hero-back.svg);background-size:1152px 640px;background-position:0 0;"></div>
+    <div id="s07-bar1" class="blk" style="left:272px;top:480px;width:496px;height:24px;background:#23b39a;transform-origin:0 50%;transform:scaleX(0)"></div>
+    <div id="s07-bar2" class="blk" style="left:912px;top:448px;width:400px;height:24px;background:#b3a8ea;transform-origin:0 50%;transform:scaleX(0)"></div>
+    <div id="s07-bar3" class="blk" style="left:1456px;top:480px;width:256px;height:24px;background:#ffc96b;transform-origin:0 50%;transform:scaleX(0)"></div>
+    <div class="scan" style="opacity:0.28"></div>
+  </div>
+</div>
+
+</div>
+<script>
+
+  const tl = gsap.timeline({ paused: true });
+  const S = (sel, vars, at) => tl.set(sel, vars, at);
+  const F = (sel, from, to, at) => tl.fromTo(sel, from, Object.assign({ duration: 0.2, ease: "steps(4)" }, to), at);
+  function cycleBg(sel, at, dur, fw, n, fps) {
+    const period = n / fps;
+    const count = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { backgroundPositionX: "0px" }, at);
+    for (let c = 0; c < count; c++) {
+      for (let f = 1; f < n; f++) {
+        tl.set(sel, { backgroundPositionX: (-f * fw) + "px" }, at + c * period + (f * period) / n);
+      }
+      if (c < count - 1) tl.set(sel, { backgroundPositionX: "0px" }, at + (c + 1) * period - 0.02);
+    }
+  }
+  function blink(sel, at, dur, period, duty) {
+    const d = duty || 0.5;
+    const n = Math.max(1, Math.floor(dur / period));
+    tl.set(sel, { opacity: 1 }, at);
+    for (let i = 0; i < n; i++) {
+      tl.set(sel, { opacity: 0 }, at + i * period + period * d);
+      tl.set(sel, { opacity: 1 }, at + (i + 1) * period - 0.02);
+    }
+  }
+  function charsIn(sel, at, count, step, yFrom) {
+    tl.set(sel, { opacity: 0, y: (yFrom === undefined ? -24 : yFrom) }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.12, ease: "steps(3)", stagger: step }, at);
+  }
+  const BEAT = 0.46;
+  const bt = (n) => +(n * BEAT).toFixed(3);
+  function cam(sel, at, dur, from, to, steps) {
+    tl.fromTo(sel, from, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function camTo(sel, at, dur, to, steps) {
+    tl.to(sel, Object.assign({ duration: dur, ease: "steps(" + (steps || 24) + ")" }, to), at);
+  }
+  function vis(sel, at, on) { tl.set(sel, { opacity: on ? 1 : 0 }, at); }
+  function swap(a, b, at) { tl.set(a, { opacity: 0 }, at); tl.set(b, { opacity: 1 }, at); }
+  function shake(sel, at, dur, amp, steps) {
+    tl.fromTo(sel, { x: 0, y: 0 }, { x: amp, y: -Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at);
+    tl.to(sel, { x: -amp, y: Math.round(amp / 2), duration: dur / 2, ease: "steps(" + (steps || 3) + ")" }, at + dur / 2);
+    tl.to(sel, { x: 0, y: 0, duration: 0.1 }, at + dur);
+  }
+  function lyricIn(id, at, dur, step) {
+    const sel = "#" + id + " .ch";
+    tl.set(sel, { opacity: 0, y: 12 }, at);
+    tl.to(sel, { opacity: 1, y: 0, duration: 0.14, ease: "steps(2)", stagger: step || 0.05 }, at);
+    if (dur) tl.to(sel, { opacity: 0, y: -10, duration: 0.16, ease: "steps(3)", stagger: 0.012 }, at + dur - 0.55);
+  }
+  function typeIn(sel, at, step) {
+    tl.set(sel, { opacity: 0 }, at);
+    tl.set(sel, { opacity: 1 }, at);
+    tl.to(sel, { opacity: 1, duration: 0.05, stagger: step }, at);
+  }
+
+
+    // S22 — 四个 2.86 秒的快切，每一段都只有一个动作 + 一次停顿
+    cam("#s07-cam1", 0, 2.86, { scale: 1.0 }, { scale: 1.1 }, 12);
+    S("#s07h1a-finger", { y: 0 }, 0);
+    tl.to("#s07h1a-finger", { y: -10, duration: 0.2, ease: "steps(2)" }, 0.4);
+    tl.to("#s07h1a-finger", { y: 0, duration: 0.2, ease: "steps(2)" }, 0.9);
+    F("#s07-h1b", { x: 0 }, { x: -10, duration: 0.6, ease: "steps(4)" }, 0.4);
+    S("#s07-h1b", { x: -10 }, 1.4);
+
+    cam("#s07-cam2", 2.86, 2.86, { scale: 1.0 }, { scale: 1.08 }, 12);
+    S("#s07-ha2", { y: 0, rotation: 0 }, 0);
+    tl.to("#s07-ha2", { y: 40, duration: 0.4, ease: "steps(4)" }, 0.3);
+    tl.to("#s07-ha2b", { y: 40, duration: 0.4, ease: "steps(4)" }, 0.3);
+    S("#s07-ha2", { y: 40 }, 1.2);
+    tl.to("#s07-ha2", { y: 0, duration: 0.4, ease: "steps(4)" }, 1.8);
+    tl.to("#s07-ha2b", { y: 0, duration: 0.4, ease: "steps(4)" }, 1.8);
+
+    cam("#s07-cam3", 5.72, 2.86, { scale: 1.0 }, { scale: 1.1 }, 12);
+    S("#s07h3-finger", { y: 0 }, 0);
+    tl.to("#s07h3-finger", { y: -30, duration: 0.2, ease: "steps(2)" }, 0.3);
+    tl.to("#s07h3-finger", { y: 0, duration: 0.14, ease: "steps(2)" }, 0.9);
+    S("#s07h3-keylight", { opacity: 0 }, 0.9);
+    S("#s07h3-keylight", { opacity: 1 }, 0.96);
+    S("#s07-green", { opacity: 0 }, 0.9);
+    S("#s07-green", { opacity: 0.35 }, 0.96);
+    S("#s07-green", { opacity: 0 }, 1.2);
+
+    cam("#s07-cam4", 8.58, 2.86, { scale: 1.0 }, { scale: 1.06 }, 12);
+    S("#s07-cup", { y: 0 }, 0);
+    tl.to("#s07-cup", { y: -70, duration: 0.5, ease: "steps(5)" }, 0.3);
+    S("#s07-cup", { y: -70 }, 1.1);
+    tl.to("#s07-cup", { y: 0, duration: 0.4, ease: "steps(4)" }, 1.9);
+
+    // S23 — 身体跟着节奏摇，猫跳上来
+    cycleBg("#s07-dev5", 11.44, 10.0, 576, 2, 4.35);
+    cycleBg("#s07-cat5", 11.44, 2.6, 96, 2, 1.2);
+    for (let i = 0; i < 10; i++) {
+      S("#s07-rock", { rotation: 0 }, 11.44 + i * 0.92);
+      tl.to("#s07-rock", { rotation: i % 2 ? -2.5 : 2.5, duration: 0.46, ease: "steps(3)" }, 11.44 + i * 0.92);
+    }
+    S("#s07-rock", { rotation: 0 }, 20.6);
+    S("#s07-cat5", { y: 0, opacity: 1 }, 11.44);
+    tl.to("#s07-cat5", { y: -40, duration: 0.5, ease: "steps(5)" }, 12.4);
+    S("#s07-cat5", { y: -40 }, 13.0);
+    tl.to("#s07-cat5", { y: 0, duration: 0.2, ease: "steps(2)" }, 13.4);
+
+    // S24 — 背影推近，进度条在他背上爬
+    cycleBg("#s07-dev6", 21.44, 9.0, 576, 2, 4.35);
+    cam("#s07-cam6", 21.44, 9.4, { scale: 1.0 }, { scale: 1.18 }, 30);
+    F("#s07-bar1", { scaleX: 0 }, { scaleX: 1, duration: 9.0, ease: "steps(42)" }, 21.5);
+    F("#s07-bar2", { scaleX: 0 }, { scaleX: 1, duration: 8.4, ease: "steps(38)" }, 21.9);
+    F("#s07-bar3", { scaleX: 0 }, { scaleX: 1, duration: 7.6, ease: "steps(34)" }, 22.4);
+  
+window.__timelines["s07-build"] = tl;
+</script>
+</template>

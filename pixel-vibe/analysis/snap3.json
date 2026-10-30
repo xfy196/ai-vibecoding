@@ -1,0 +1,33 @@
+﻿{
+  "ok": true,
+  "outputDir": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614",
+  "frames": [
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\frame-00-at-0s.png",
+      "time": 0
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\frame-01-at-1s.png",
+      "time": 1
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\frame-02-at-269s.png",
+      "time": 269
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\frame-03-at-270.5s.png",
+      "time": 270.5
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\frame-04-at-271.86s.png",
+      "time": 271.86
+    }
+  ],
+  "contactSheets": [
+    "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\95f46e34-9b4a-496f-9847-94849afd5614\\contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}

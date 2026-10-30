@@ -1,0 +1,1776 @@
+﻿{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 1,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "composition_file_too_large",
+        "severity": "warning",
+        "message": "This HTML composition file has 382 lines. Smaller sub-compositions are easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\compositions\\s05-game.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Split this sub-composition further into smaller .html files, then mount them from the parent with data-composition-src so each file stays small enough to inspect, revise, and validate independently."
+      }
+    ],
+    "filesScanned": 11
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 272.11,
+    "samples": [
+      15.117,
+      45.352,
+      75.586,
+      105.821,
+      136.055,
+      166.289,
+      196.524,
+      226.758,
+      256.993
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      15.117,
+      75.586,
+      136.055,
+      196.524,
+      256.993
+    ],
+    "checked": 71,
+    "passed": 71
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 18,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 73 text elements stay under it for 0.5 s or more, the smallest \"vibecoding.app\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "vibecoding.app",
+        "selector": "#s01-headtxt",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s01-boot.html",
+        "bbox": {
+          "x": 384,
+          "y": 204,
+          "width": 182,
+          "height": 24
+        },
+        "time": 0,
+        "times": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5.906,
+          5.906,
+          5.906,
+          5.906,
+          5.906,
+          5.906,
+          5.906,
+          5.906
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 12.719,
+        "elements": [
+          {
+            "selector": "#s01-headtxt",
+            "text": "vibecoding.app",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(3)",
+            "text": "v",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(4)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(5)",
+            "text": "b",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(6)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(8)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(9)",
+            "text": "n",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(10)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(11)",
+            "text": "t",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(3)",
+            "text": "a",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(4)",
+            "text": "u",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(5)",
+            "text": "d",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(6)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(7)",
+            "text": "o",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(9)",
+            "text": "2",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(10)",
+            "text": "7",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(11)",
+            "text": "2",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(12)",
+            "text": "s",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(16)",
+            "text": "g",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(17)",
+            "text": "r",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(18)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(19)",
+            "text": "d",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(21)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(22)",
+            "text": "8",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l2 > span:nth-of-type(23)",
+            "text": "0",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(3)",
+            "text": "t",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(4)",
+            "text": "h",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(5)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(6)",
+            "text": "m",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(7)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(9)",
+            "text": "p",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(10)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(11)",
+            "text": "x",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(12)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(13)",
+            "text": "l",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(17)",
+            "text": "f",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(18)",
+            "text": "p",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(19)",
+            "text": "s",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(21)",
+            "text": "3",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l3 > span:nth-of-type(22)",
+            "text": "0",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(3)",
+            "text": "p",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(4)",
+            "text": "r",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(5)",
+            "text": "o",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(6)",
+            "text": "m",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(7)",
+            "text": "p",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(8)",
+            "text": "t",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(11)",
+            "text": "做",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 8.631
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(12)",
+            "text": "一",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 8.631
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(13)",
+            "text": "个",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 8.631
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(14)",
+            "text": "游",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 8.631
+          },
+          {
+            "selector": "#s01-l4 > span:nth-of-type(15)",
+            "text": "戏",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 8.631
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(3)",
+            "text": "a",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(4)",
+            "text": "g",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(5)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(6)",
+            "text": "n",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(7)",
+            "text": "t",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(10)",
+            "text": "好",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(12)",
+            "text": "开",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(13)",
+            "text": "始",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(14)",
+            "text": "像",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(15)",
+            "text": "素",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-l5 > span:nth-of-type(16)",
+            "text": "化",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 9.994
+          },
+          {
+            "selector": "#s01-statustxt",
+            "text": "UTF-8 · PIXEL · REC",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-ampm",
+            "text": "AM · 周三",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-label",
+            "text": "ONE NIGHT / 一夜",
+            "fontPx": 24,
+            "time": 0,
+            "seconds": 12.719
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(15)",
+            "text": "s",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(16)",
+            "text": "o",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(17)",
+            "text": "n",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(18)",
+            "text": "g",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(20)",
+            "text": "忘",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(21)",
+            "text": "记",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(22)",
+            "text": "时",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s01-l1 > span:nth-of-type(23)",
+            "text": "间",
+            "fontPx": 24,
+            "time": 5.906,
+            "seconds": 6.813
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"a u d i o 2 7 2 s\" (9 words) is on screen 0.65 s (±0.01 s), under its 2.40 s floor: hold it about 0.5 s + 0.3 s a word (3.20 s here) before it leaves or changes; see references/motion.md.",
+        "text": "a u d i o 2 7 2 s",
+        "selector": "#s01-l2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s01-boot.html",
+        "bbox": {
+          "x": 408,
+          "y": 296,
+          "width": 134,
+          "height": 32
+        },
+        "time": 6.559,
+        "words": 9,
+        "seconds": 0.653,
+        "floorSeconds": 2.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"t h e m e p i\" (7 words) is on screen 0.60 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "t h e m e p i",
+        "selector": "#s01-l3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s01-boot.html",
+        "bbox": {
+          "x": 408,
+          "y": 344,
+          "width": 104,
+          "height": 32
+        },
+        "time": 7.524,
+        "words": 7,
+        "seconds": 0.596,
+        "floorSeconds": 1.95
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 22 text elements stay under it for 0.5 s or more, the smallest \"waimi.app / build\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "waimi.app / build",
+        "selector": "#s02-headtxt",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s02-room.html",
+        "bbox": {
+          "x": 268,
+          "y": 284,
+          "width": 208,
+          "height": 24
+        },
+        "time": 12.72,
+        "times": [
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72,
+          12.72
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 19.533,
+        "elements": [
+          {
+            "selector": "#s02-headtxt",
+            "text": "waimi.app / build",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-code1",
+            "text": "function night() {",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-code2",
+            "text": "return memory",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-code3",
+            "text": ".filter(warm)",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-code4",
+            "text": ".map(smile)",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-bartxt",
+            "text": "生成中…",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 19.533
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(1)",
+            "text": "一",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 16.808
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(2)",
+            "text": "夜",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 16.808
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(6)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(8)",
+            "text": "5",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(9)",
+            "text": "7",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(11)",
+            "text": "A",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(12)",
+            "text": "M",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(16)",
+            "text": "从",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(17)",
+            "text": "零",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(18)",
+            "text": "到",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(19)",
+            "text": "一",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(20)",
+            "text": "个",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(21)",
+            "text": "像",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(22)",
+            "text": "素",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(23)",
+            "text": "世",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          },
+          {
+            "selector": "#s02-t3 > span:nth-of-type(24)",
+            "text": "界",
+            "fontPx": 24,
+            "time": 12.72,
+            "seconds": 9.085
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.63 s (47.70–51.33 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 47.699,
+        "seconds": 3.634,
+        "floorSeconds": 3,
+        "until": 51.333
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 4 text elements stay under it for 0.5 s or more, the smallest \"说好的永远\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "说好的永远",
+        "selector": "#s04a > div:nth-of-type(14)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s04-break.html",
+        "bbox": {
+          "x": 760,
+          "y": 432,
+          "width": 130,
+          "height": 24
+        },
+        "time": 62.69,
+        "times": [
+          62.69,
+          70.412,
+          70.412,
+          70.412
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.722,
+        "elements": [
+          {
+            "selector": "#s04a > div:nth-of-type(14)",
+            "text": "说好的永远",
+            "fontPx": 24,
+            "time": 62.69,
+            "seconds": 7.722
+          },
+          {
+            "selector": "#s04b > div:nth-of-type(7)",
+            "text": "git diff 记忆.psd",
+            "fontPx": 24,
+            "time": 70.412,
+            "seconds": 6.36
+          },
+          {
+            "selector": "#s04b > div:nth-of-type(10)",
+            "text": "却都已改变",
+            "fontPx": 24,
+            "time": 70.412,
+            "seconds": 6.36
+          },
+          {
+            "selector": "#s04b > div:nth-of-type(11)",
+            "text": "- 48 frames + 1 frame",
+            "fontPx": 24,
+            "time": 70.412,
+            "seconds": 6.36
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 3.18 s (72.68–75.86 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 72.684,
+        "seconds": 3.18,
+        "floorSeconds": 3,
+        "until": 75.864
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.00 s (84.95–89.95 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 84.949,
+        "seconds": 4.997,
+        "floorSeconds": 3,
+        "until": 89.946
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 11 text elements stay under it for 0.5 s or more, the smallest \"waimi.exe — 记忆路线 v1.0\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "waimi.exe — 记忆路线 v1.0",
+        "selector": "#s05-s1 > div:nth-of-type(5)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s05-game.html",
+        "bbox": {
+          "x": 112,
+          "y": 60,
+          "width": 316,
+          "height": 24
+        },
+        "time": 90.855,
+        "times": [
+          90.855,
+          90.855,
+          94.943,
+          94.943,
+          98.577,
+          98.577,
+          98.577,
+          105.846,
+          105.846,
+          109.48,
+          113.114
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.088,
+        "elements": [
+          {
+            "selector": "#s05-s1 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 90.855,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s05-s1 > div:nth-of-type(39)",
+            "text": "3 站台",
+            "fontPx": 24,
+            "time": 90.855,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s05-s2 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 94.943,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s05-s2 > div:nth-of-type(39)",
+            "text": "3 站台",
+            "fontPx": 24,
+            "time": 94.943,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s05-s3 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 98.577,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s05-s3 > div:nth-of-type(39)",
+            "text": "3 站台",
+            "fontPx": 24,
+            "time": 98.577,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s05-s3 > div:nth-of-type(42)",
+            "text": "MISSING",
+            "fontPx": 24,
+            "time": 98.577,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s05-s4 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 105.846,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s05-s4 > div:nth-of-type(40)",
+            "text": "3 站台",
+            "fontPx": 24,
+            "time": 105.846,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s05-s5 > div:nth-of-type(5)",
+            "text": "waimi.exe — 记忆路线 v1.0",
+            "fontPx": 24,
+            "time": 109.48,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s05-s6 > div:nth-of-type(7)",
+            "text": "到最深处 · 1 frame",
+            "fontPx": 24,
+            "time": 113.114,
+            "seconds": 8.631
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.45 s (99.49–104.94 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 99.486,
+        "seconds": 5.451,
+        "floorSeconds": 3,
+        "until": 104.937
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 10 text elements stay under it for 0.5 s or more, the smallest \"build.log — failed\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "build.log — failed",
+        "selector": "#s06a > div:nth-of-type(5)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s06-tears.html",
+        "bbox": {
+          "x": 192,
+          "y": 124,
+          "width": 228,
+          "height": 24
+        },
+        "time": 121.745,
+        "times": [
+          121.745,
+          126.288,
+          128.559,
+          128.559,
+          128.559,
+          128.559,
+          128.559,
+          135.828,
+          143.096,
+          143.096
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 6.814,
+        "elements": [
+          {
+            "selector": "#s06a > div:nth-of-type(5)",
+            "text": "build.log — failed",
+            "fontPx": 24,
+            "time": 121.745,
+            "seconds": 6.814
+          },
+          {
+            "selector": "#s06a-fail",
+            "text": "BUILD FAILED · 04:57",
+            "fontPx": 24,
+            "time": 126.288,
+            "seconds": 2.271
+          },
+          {
+            "selector": "#s06b > div:nth-of-type(5)",
+            "text": "her.ts",
+            "fontPx": 24,
+            "time": 128.559,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s06b > div:nth-of-type(6)",
+            "text": "// 她",
+            "fontPx": 24,
+            "time": 128.559,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s06b > div:nth-of-type(7)",
+            "text": "// 从没有走远",
+            "fontPx": 24,
+            "time": 128.559,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s06b > div:nth-of-type(8)",
+            "text": "function drawHer() {",
+            "fontPx": 24,
+            "time": 128.559,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s06b > div:nth-of-type(9)",
+            "text": "return memory[0]",
+            "fontPx": 24,
+            "time": 128.559,
+            "seconds": 7.269
+          },
+          {
+            "selector": "#s06c > div:nth-of-type(4)",
+            "text": "誓言 · 还在回旋",
+            "fontPx": 24,
+            "time": 135.828,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s06d > div:nth-of-type(19)",
+            "text": "05:41",
+            "fontPx": 24,
+            "time": 143.096,
+            "seconds": 5.906
+          },
+          {
+            "selector": "#s06d > div:nth-of-type(20)",
+            "text": "没有你的明天",
+            "fontPx": 24,
+            "time": 143.096,
+            "seconds": 5.906
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 5.91 s (136.28–142.19 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 136.282,
+        "seconds": 5.906,
+        "floorSeconds": 3,
+        "until": 142.188
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 21 text elements stay under it for 0.5 s or more, the smallest \"a\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "a",
+        "selector": "#s07a-line > span:nth-of-type(3)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s07-build.html",
+        "bbox": {
+          "x": 554,
+          "y": 368,
+          "width": 14,
+          "height": 24
+        },
+        "time": 149.002,
+        "times": [
+          149.002,
+          149.002,
+          149.456,
+          149.456,
+          149.456,
+          149.456,
+          149.456,
+          149.456,
+          149.91,
+          149.91,
+          149.91,
+          149.91,
+          149.91,
+          150.365,
+          153.545,
+          153.545,
+          155.362,
+          160.359,
+          160.359,
+          160.359,
+          170.353
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.542,
+        "elements": [
+          {
+            "selector": "#s07a-line > span:nth-of-type(3)",
+            "text": "a",
+            "fontPx": 24,
+            "time": 149.002,
+            "seconds": 4.542
+          },
+          {
+            "selector": "#s07a-sub",
+            "text": "waking the machine…",
+            "fontPx": 24,
+            "time": 149.002,
+            "seconds": 4.542
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(4)",
+            "text": "g",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(5)",
+            "text": "e",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(6)",
+            "text": "n",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(7)",
+            "text": "t",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(9)",
+            "text": "b",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(10)",
+            "text": "u",
+            "fontPx": 24,
+            "time": 149.456,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(11)",
+            "text": "i",
+            "fontPx": 24,
+            "time": 149.91,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(12)",
+            "text": "l",
+            "fontPx": 24,
+            "time": 149.91,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(13)",
+            "text": "d",
+            "fontPx": 24,
+            "time": 149.91,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(17)",
+            "text": "a",
+            "fontPx": 24,
+            "time": 149.91,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(18)",
+            "text": "l",
+            "fontPx": 24,
+            "time": 149.91,
+            "seconds": 3.634
+          },
+          {
+            "selector": "#s07a-line > span:nth-of-type(19)",
+            "text": "l",
+            "fontPx": 24,
+            "time": 150.365,
+            "seconds": 3.179
+          },
+          {
+            "selector": "#s07b > div:nth-of-type(3)",
+            "text": "chat — vibecoding",
+            "fontPx": 24,
+            "time": 153.545,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s07b-m1 > div:nth-of-type(1)",
+            "text": "把站台画成像素的",
+            "fontPx": 24,
+            "time": 153.545,
+            "seconds": 6.813
+          },
+          {
+            "selector": "#s07b-m2 > div:nth-of-type(1)",
+            "text": "好的，先生成素材",
+            "fontPx": 24,
+            "time": 155.362,
+            "seconds": 4.996
+          },
+          {
+            "selector": "#s07c > div:nth-of-type(5)",
+            "text": "diff",
+            "fontPx": 24,
+            "time": 160.359,
+            "seconds": 9.993
+          },
+          {
+            "selector": "#s07c > div:nth-of-type(9)",
+            "text": "build",
+            "fontPx": 24,
+            "time": 160.359,
+            "seconds": 9.993
+          },
+          {
+            "selector": "#s07c > div:nth-of-type(13)",
+            "text": "sprite",
+            "fontPx": 24,
+            "time": 160.359,
+            "seconds": 9.993
+          },
+          {
+            "selector": "#s07d-pct",
+            "text": "build 0% → 100%",
+            "fontPx": 24,
+            "time": 170.353,
+            "seconds": 9.085
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 9.54 s (160.36–169.90 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 160.359,
+        "seconds": 9.539,
+        "floorSeconds": 3,
+        "until": 169.898
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 3 text elements stay under it for 0.5 s or more, the smallest \"✓ build complete\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "✓ build complete",
+        "selector": "#s08-s1 > div:nth-of-type(4)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s08-ship.html",
+        "bbox": {
+          "x": 184,
+          "y": 176,
+          "width": 205.98,
+          "height": 24
+        },
+        "time": 179.438,
+        "times": [
+          179.438,
+          179.438,
+          179.438
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 4.088,
+        "elements": [
+          {
+            "selector": "#s08-s1 > div:nth-of-type(4)",
+            "text": "✓ build complete",
+            "fontPx": 24,
+            "time": 179.438,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s08-s1 > div:nth-of-type(5)",
+            "text": "memory route · 24 frames",
+            "fontPx": 24,
+            "time": 179.438,
+            "seconds": 4.088
+          },
+          {
+            "selector": "#s08-s1 > div:nth-of-type(6)",
+            "text": "image 1744x608 px",
+            "fontPx": 24,
+            "time": 179.438,
+            "seconds": 4.088
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"1 FRAME · 一瞬间\" renders at 24 px for 7.27 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "1 FRAME · 一瞬间",
+        "selector": "#s09-1f",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s09-moment.html",
+        "bbox": {
+          "x": 863,
+          "y": 64,
+          "width": 194,
+          "height": 24
+        },
+        "time": 218.051,
+        "times": [
+          218.051
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.269,
+        "elements": [
+          {
+            "selector": "#s09-1f",
+            "text": "1 FRAME · 一瞬间",
+            "fontPx": 24,
+            "time": 218.051,
+            "seconds": 7.269
+          }
+        ]
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 15 text elements stay under it for 0.5 s or more, the smallest \"05:41\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "05:41",
+        "selector": "#s10b > div:nth-of-type(16)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/s10-outro.html",
+        "bbox": {
+          "x": 176,
+          "y": 432,
+          "width": 60,
+          "height": 24
+        },
+        "time": 232.134,
+        "times": [
+          232.134,
+          232.134,
+          243.036,
+          243.036,
+          243.036,
+          243.036,
+          243.036,
+          247.125,
+          247.125,
+          247.125,
+          247.125,
+          247.125,
+          257.573,
+          258.028,
+          258.482
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 10.902,
+        "elements": [
+          {
+            "selector": "#s10b > div:nth-of-type(16)",
+            "text": "05:41",
+            "fontPx": 24,
+            "time": 232.134,
+            "seconds": 10.902
+          },
+          {
+            "selector": "#s10b > div:nth-of-type(17)",
+            "text": "第二天",
+            "fontPx": 24,
+            "time": 232.134,
+            "seconds": 10.902
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(1)",
+            "text": "一",
+            "fontPx": 24,
+            "time": 243.036,
+            "seconds": 11.357
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(2)",
+            "text": "夜",
+            "fontPx": 24,
+            "time": 243.036,
+            "seconds": 11.357
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(6)",
+            "text": "0",
+            "fontPx": 24,
+            "time": 243.036,
+            "seconds": 11.357
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(7)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 243.036,
+            "seconds": 11.357
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(9)",
+            "text": "5",
+            "fontPx": 24,
+            "time": 243.036,
+            "seconds": 11.357
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(10)",
+            "text": "7",
+            "fontPx": 24,
+            "time": 247.125,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(14)",
+            "text": "0",
+            "fontPx": 24,
+            "time": 247.125,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(15)",
+            "text": "5",
+            "fontPx": 24,
+            "time": 247.125,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(17)",
+            "text": "4",
+            "fontPx": 24,
+            "time": 247.125,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s10c-t3 > span:nth-of-type(18)",
+            "text": "1",
+            "fontPx": 24,
+            "time": 247.125,
+            "seconds": 7.268
+          },
+          {
+            "selector": "#s10d-tag",
+            "text": "一夜 · 04:57 → 05:41 · 480×270 px",
+            "fontPx": 24,
+            "time": 257.573,
+            "seconds": 11.811
+          },
+          {
+            "selector": "#s10d-credit",
+            "text": "词 孙艺 · 曲 程振兴 · 唱 胡歌",
+            "fontPx": 24,
+            "time": 258.028,
+            "seconds": 11.356
+          },
+          {
+            "selector": "#s10d-made",
+            "text": "made with hyperframes · pixel 4×",
+            "fontPx": 24,
+            "time": 258.482,
+            "seconds": 10.902
+          }
+        ]
+      },
+      {
+        "code": "dead_stretch",
+        "severity": "warning",
+        "message": "Nothing on screen changes for 6.36 s (247.13–253.49 s): start the next move within 3 s, or put data-hold on the element whose stillness is deliberate; see references/motion.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 247.125,
+        "seconds": 6.36,
+        "floorSeconds": 3,
+        "until": 253.485
+      }
+    ],
+    "enabled": true,
+    "step": 0.45400000000000773,
+    "samples": 599
+  },
+  "audio": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  },
+  "saved": {
+    "id": "8b2500bd-de8d-4b61-88c5-4eaded10aa00",
+    "revision": "daf1b310-c072-469a-8dc1-2e9dec26cbb8",
+    "report": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\checks\\8b2500bd-de8d-4b61-88c5-4eaded10aa00.json",
+    "attribution": "recorded-revision"
+  },
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}

@@ -1,0 +1,86 @@
+﻿{
+  "ok": true,
+  "outputDir": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18",
+  "frames": [
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-00-at-3s.png",
+      "time": 3
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-01-at-15s.png",
+      "time": 15
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-02-at-36s.png",
+      "time": 36
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-03-at-50s.png",
+      "time": 50
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-04-at-73s.png",
+      "time": 73
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-05-at-87s.png",
+      "time": 87
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-06-at-101s.png",
+      "time": 101
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-07-at-116s.png",
+      "time": 116
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-08-at-131s.png",
+      "time": 131
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-09-at-145s.png",
+      "time": 145
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-10-at-156s.png",
+      "time": 156
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-11-at-175s.png",
+      "time": 175
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-12-at-190s.png",
+      "time": 190
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-13-at-204s.png",
+      "time": 204
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-14-at-220s.png",
+      "time": 220
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-15-at-240s.png",
+      "time": 240
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-16-at-265s.png",
+      "time": 265
+    },
+    {
+      "path": "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\frame-17-at-271.86s.png",
+      "time": 271.86
+    }
+  ],
+  "contactSheets": [
+    "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\contact-sheet-1.jpg",
+    "D:\\porojects\\ai-vibecoding\\pixel-vibe\\.hyperframes\\artifacts\\snapshots\\fa6a3c3e-7627-4a28-842e-2a227caabc18\\contact-sheet-2.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.216",
+    "updateAvailable": false
+  }
+}
