@@ -1,0 +1,25 @@
+{
+  "name": "nian-shao-paper-mv",
+  "version": "1.0.0",
+  "private": true,
+  "description": "年少有为 — layered paper-cut animated MV, generated entirely with Remotion (React + SVG)",
+  "scripts": {
+    "dev": "remotion studio",
+    "still": "remotion still NianShaoMV out/stills/still.png",
+    "seq": "remotion render NianShaoMV out/frames --sequence --image-format=png --concurrency=6",
+    "mix": "python assets/mix_audio.py",
+    "encode": "python assets/encode.py"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "@remotion/media-utils": "4.0.539",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.0",
+    "typescript": "5.6.3"
+  }
+}

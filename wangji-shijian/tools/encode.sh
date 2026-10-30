@@ -12,8 +12,14 @@ N=$(ls out/frames/*.jpg 2>/dev/null | wc -l | tr -d ' ')
 [ "$N" -eq 0 ] && { echo "out/frames 里没有帧，先跑 tools/render_all.sh"; exit 1; }
 echo "encoding $N frames @12fps -> 24fps container using $FF"
 
+# 两件必须做的事，否则播放器上会发灰：
+#   1) JPEG 帧是 **full range (pc)**，H.264 要 **limited range (tv)**，必须显式转，否则黑位被压、全片发白。
+#   2) 1080p 要打上 bt709 色彩标签，否则很多播放器按 bt601 解，颜色会偏。
 "$FF" -y -loglevel error -framerate 12 -i out/frames/f%05d.jpg -i assets/song.mp3 \
-  -map 0:v -map 1:a -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -r 24 \
+  -map 0:v -map 1:a \
+  -vf "scale=in_range=pc:out_range=tv:flags=lanczos,format=yuv420p" \
+  -c:v libx264 -preset slow -crf 20 -r 24 \
+  -colorspace bt709 -color_primaries bt709 -color_trc bt709 -color_range tv \
   -c:a aac -b:a 192k -shortest -movflags +faststart \
   "out/忘记时间_水彩MV.mp4"
 ls -lh "out/忘记时间_水彩MV.mp4"

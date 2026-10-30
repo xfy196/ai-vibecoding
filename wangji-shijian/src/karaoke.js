@@ -32,9 +32,14 @@ const LY = [
 const KFONT = '"Ma Shan Zheng", "Kaiti SC", "STKaiti", serif';
 window.EXTRA_FONTS = [[`64px ${KFONT}`, LY.map(l => l[2]).join('')]];
 
+// 全局微调（秒）：正数 = 歌词整体往后推。只有在核对过成片、确认整片统一偏晚/偏早时才改，
+// 改 config.js 里的 PROJECT.lyricOffset，不要在这里写死。
+const LOFF = (typeof PROJECT !== 'undefined' && PROJECT.lyricOffset) || 0;
+
 window.overlayHook = (c, t) => {
-  const i = LY.findIndex(l => t >= l[0] && t < l[1]);
-  if (i >= 0) kLine(c, LY[i], t, 1024, 1, 1, false);
+  const u = t - LOFF;
+  const i = LY.findIndex(l => u >= l[0] && u < l[1]);
+  if (i >= 0) kLine(c, LY[i], u, 1024, 1, 1, false);
 };
 function kLine(c, L, t, y, sc, alpha, held) {
   const [a, b, txt, opt = {}] = L;
@@ -50,7 +55,12 @@ function kLine(c, L, t, y, sc, alpha, held) {
   c.lineTo(x0 + r(9), y0 + 84 + r(10)); c.lineTo(x0 - 14, y0 + 42); c.closePath(); c.fill();
   c.globalAlpha = alpha;
   if (grow > .85) {
-    const n = [...txt].length, singDur = opt.sing ?? Math.min((b - a) * .85, n * .3), f = clamp((t - a) / singDur);
+    // 逐字填充必须覆盖这一行真正的演唱长度：LRC 里下一行的起点就是这行唱完的时刻，
+    // 所以 (b - a) 本身就是这句话的演唱时长，* .85 留出换气的尾巴。
+    // 原实现额外卡了个 n * .3（0.3 秒/字）的上限，而慢歌每字实际要 0.6–0.8 秒，
+    // 这个上限比真实演唱快 2–3 倍 —— 27 行里有 22 行的字在唱完前 2–5 秒就全变色了，
+    // 表现就是"字幕跑在声音前面 / 歌词对不上声音"。别再加回来。
+    const singDur = opt.sing ?? (b - a) * .85, f = clamp((t - a) / singDur);
     const x = 960 - total / 2;
     c.fillStyle = PAL.cream; c.fillText(txt, x, y);
     c.save(); c.beginPath(); c.rect(x - 2, y - 50, total * f + 2, 100); c.clip(); c.fillStyle = PAL.ochre; c.fillText(txt, x, y); c.restore();
