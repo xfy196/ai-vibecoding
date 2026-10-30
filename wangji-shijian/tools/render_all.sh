@@ -1,12 +1,19 @@
 #!/bin/bash
-# 分块渲染：Chrome 渲到一定帧数会崩（Target closed），所以每块重开一个浏览器，崩了就重试。
-# render.mjs --frames 会跳过已存在的帧，所以重跑不会浪费。
+# 分块渲染 SVG->JPG 帧序列。Chrome 渲到一定帧数会崩（Target closed），所以每块重开浏览器，崩了自动重试。
+# render.mjs --frames 会跳过已存在的帧，所以随时中断、随时续跑，不会重复劳动。
+#
+# 用法:   FPS=12 ./tools/render_all.sh
+# 要求:   node、Google Chrome；ffmpeg 只在最后 encode.sh 用到
 set -u
 cd "$(dirname "$0")/.."
-export PATH="$PWD/bin:/Users/xufuying/.dsh-beta/dsh-runtimes/dsh-next-primary-runtime/dependencies/node/bin:$PATH"
+
+# ---- 前置检查 ----
+command -v node >/dev/null || { echo "缺少 node。装 Node.js 20+ 后重试。"; exit 1; }
+[ -f node_modules/puppeteer-core/package.json ] || { echo "缺少依赖，先跑: npm install   (或 pnpm install)"; exit 1; }
+
 DUR=272.14
-CHUNK=12          # 每块几秒
-FPS=${FPS:-12}
+CHUNK=${CHUNK:-12}      # 每块几秒
+FPS=${FPS:-12}          # 必须是 12：帧文件名对应的时间点由它决定，改了会和已有帧错位
 N=23
 FAIL=0
 for ((i=0;i<N;i++)); do
