@@ -1,0 +1,27 @@
+import puppeteer from 'puppeteer-core';
+import http from 'node:http';
+import { createReadStream, existsSync } from 'node:fs';
+import { extname, join, normalize, dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const srv = await new Promise((r)=>{const s=http.createServer((q,res)=>{let p=decodeURIComponent(q.url.split('?')[0]);if(p==='/')p='/public/index.html';const f=normalize(join(ROOT,p));if(!existsSync(f)){res.writeHead(404);res.end();return;}res.writeHead(200,{'Content-Type':extname(f)==='.js'?'text/javascript':'text/html'});createReadStream(f).pipe(res);});s.listen(4175,'127.0.0.1',()=>r(s));});
+const b = await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:'new',args:['--no-sandbox'],defaultViewport:{width:1920,height:1080}});
+const p = await b.newPage();
+await p.goto('http://127.0.0.1:4175/public/index.html',{waitUntil:'load'});
+await p.waitForFunction('window.__ready===true');
+const out = await p.evaluate(()=>{
+  textSize(52);
+  const f0 = drawingContext.font;
+  const w0 = textWidth('我');
+  textFont('Songti SC');
+  const f1 = drawingContext.font;
+  const w1 = textWidth('我');
+  textStyle(BOLD);
+  const f2 = drawingContext.font;
+  const w2 = textWidth('我');
+  const sz = textSize();
+  const c = document.querySelector('canvas');
+  return {f0,w0,f1,f2,w1,w2, sz, cw: c.width, ch: c.height, cssw: c.style.width, cssh: c.style.height, dpr: devicePixelRatio, fonts: document.fonts.check('52px "Songti SC"')};
+});
+console.log(out);
+await b.close(); srv.close();

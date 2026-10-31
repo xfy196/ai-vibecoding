@@ -1,0 +1,15 @@
+{
+  "name": "huiyi-popup-mv",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "analyze": "node scripts/analyze.mjs",
+    "render": "node scripts/render.mjs",
+    "mux": "node scripts/mux.mjs"
+  },
+  "dependencies": {
+    "p5": "^1.11.3",
+    "puppeteer-core": "^24.10.0"
+  }
+}

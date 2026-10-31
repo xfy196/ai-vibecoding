@@ -1,0 +1,17 @@
+{
+  "duration": 60,
+  "bpm": 60,
+  "loop": false,
+  "palette": "ink",
+  "mix": {"reverb": 0.52, "room": 0.88, "gain": 1.0},
+  "bed": [
+    {"type": "pad", "note": "A1", "start": 0, "end": 60, "gain": 0.0006, "fade": 4}
+  ],
+  "patterns": [],
+  "events": [
+    {"t": 41.98, "type": "boom", "freq": 34, "dur": 3.6, "gain": 0.62, "pan": 0, "reverb": 0.55},
+    {"t": 42.02, "type": "boom", "freq": 47, "dur": 3.0, "gain": 0.3, "pan": 0, "reverb": 0.55},
+    {"t": 42.55, "type": "boom", "freq": 29, "dur": 3.2, "gain": 0.22, "pan": 0, "reverb": 0.6},
+    {"t": 43.3, "type": "boom", "freq": 26, "dur": 3.0, "gain": 0.1, "pan": 0, "reverb": 0.6}
+  ]
+}

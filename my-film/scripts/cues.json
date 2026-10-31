@@ -1,0 +1,31 @@
+{
+  "duration": 15,
+  "bpm": 60,
+  "loop": true,
+  "palette": "ink",
+  "bed": [
+    {"type": "pad", "note": "D2", "start": 0, "end": 15, "gain": 0.13, "voices": 3},
+    {"type": "pad", "note": "A2", "start": 0, "end": 15, "gain": 0.06, "voices": 2}
+  ],
+  "patterns": [],
+  "events": [
+    {"t": 1.0, "type": "drop", "freq": 620, "gain": 0.34},
+    {"t": 1.0, "type": "boom", "freq": 44, "gain": 0.16},
+    {"t": 1.45, "type": "drop", "freq": 880, "gain": 0.12},
+    {"t": 1.7, "type": "scratch", "dur": 0.8, "gain": 0.15, "pan": 0.2},
+    {"t": 3.2, "type": "pluck", "note": "D4", "gain": 0.24, "decay": 0.997},
+    {"t": 4.4, "type": "pluck", "note": "A3", "gain": 0.2},
+    {"t": 5.3, "type": "pluck", "note": "F#4", "gain": 0.18},
+    {"t": 6.4, "type": "scratch", "dur": 0.55, "gain": 0.24, "pan": -0.15},
+    {"t": 7.0, "type": "pluck", "note": "E4", "gain": 0.2},
+    {"t": 8.5, "type": "pluck", "note": "B3", "gain": 0.17},
+    {"t": 9.7, "type": "scratch", "dur": 0.9, "gain": 0.14},
+    {"t": 10.8, "type": "pluck", "note": "D4", "gain": 0.24},
+    {"t": 11.5, "type": "bell", "note": "A4", "gain": 0.2, "dur": 3},
+    {"t": 12.5, "type": "knock", "freq": 540, "gain": 0.34},
+    {"t": 12.5, "type": "pluck", "note": "D3", "gain": 0.18},
+    {"t": 13.4, "type": "scratch", "dur": 0.7, "gain": 0.13},
+    {"t": 14.15, "type": "drop", "freq": 940, "gain": 0.11},
+    {"t": 14.75, "type": "pluck", "note": "A3", "gain": 0.16}
+  ]
+}
