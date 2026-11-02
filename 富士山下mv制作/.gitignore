@@ -1,0 +1,6 @@
+node_modules/
+out/frames/
+out/stills/
+audio/_decode.wav
+audio/song*.mp4
+.DS_Store

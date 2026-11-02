@@ -351,16 +351,23 @@ function drawBook(t) {
   ctx.fillStyle = pg;
   ctx.fillRect(-PAGE_W / 2, -PAGE_H / 2, PAGE_W, PAGE_H);
 
+  const tcInfo = titleCardInfo(t);
+
   if (closeU < 1) {
     // 合书前，纸艺先「压平」收进书页
     const foldP = clamp01(closeU / 0.28);
     push();
     translate(0, 46); scale(1, 1 - 0.88 * foldP); translate(0, -46);
-    drawingContext.globalAlpha = 1 - foldP * 0.9;
+    drawingContext.globalAlpha = (1 - foldP * 0.9) * (tcInfo ? tcInfo.sceneAlpha : 1);
     const lt = Math.max(0, t - cur.t);
     drawScene(cur.id, lt, nextSceneDur(cur), t);
     drawingContext.globalAlpha = 1;
     pop();
+    // 开屏期间给场景蒙一层纸雾，让扉页成为主体
+    if (tcInfo && tcInfo.veil > 0.01) {
+      noStroke(); fill(fa('#FBF3E2', 96 * tcInfo.veil));
+      rect(-PAGE_W / 2, -PAGE_H / 2, PAGE_W, PAGE_H);
+    }
 
     const gg = ctx.createLinearGradient(-46, 0, 46, 0);
     gg.addColorStop(0, 'rgba(255,255,255,0)');
@@ -389,6 +396,10 @@ function drawBook(t) {
   noTint();
   blendMode(BLEND);
   pop();
+
+  // 开屏：书名 / 作者卡片
+  if (tcInfo) drawTitleCard(tcInfo);
+
   ctx.restore();
 
   noFill(); stroke(120, 90, 64, 45); strokeWeight(2);
@@ -540,6 +551,143 @@ function drawLyrics(t, closeU) {
   }
   textAlign(LEFT, BASELINE);
   textStyle(NORMAL);
+}
+
+/* =========================================================
+   开屏卡片：歌名 / 演唱者
+   spec.title + spec.artist 自动生成；
+   spec.titleCard = false 关闭，或 { in, out, subtitle } 覆盖默认节奏
+   ========================================================= */
+function titleCardInfo(t) {
+  if (SPEC.titleCard === false) return null;
+  const title = (SPEC.titleCard && SPEC.titleCard.text) || SPEC.title;
+  if (!title) return null;
+  const tc = SPEC.titleCard || {};
+  const firstLyric = SPEC.lyrics && SPEC.lyrics.length ? SPEC.lyrics[0].t : 2;
+  const inAt = tc.in ?? 0.15;
+  // 有前奏就让卡片多停一会儿，没有前奏（人声马上进）就压得短一些
+  const outAt = tc.out ?? Math.min(5.2, Math.max(2.6, firstLyric - 0.3));
+  const inDur = 0.6;
+  const outDur = 0.44;
+  if (t < inAt || t > outAt + outDur) return null;
+  const pIn = clamp01((t - inAt) / inDur);
+  const pOut = clamp01((t - outAt) / outDur);
+  // 卡片在位时压暗后景，退场时把亮度还给纸艺
+  const sceneAlpha = 0.34 + 0.66 * easeOut(pOut);
+  return { tc, pIn, pOut, sceneAlpha, veil: 1 - easeOut(pOut), title, artist: tc.artist || SPEC.artist || '' };
+}
+
+function drawTitleCard(info) {
+  const { pIn, pOut, title, artist, tc } = info;
+  const rise = easeOutBack(pIn);
+  const fold = easeOut(pOut);
+  const k = Math.max(0.001, rise * (1 - fold * 0.97));
+
+  push();
+  translate(0, -66);
+  translate(0, 150);        // 以卡片底边为轴立起来
+  scale(1, k);
+  translate(0, -150);
+  rotate(-0.012 + (1 - rise) * 0.05);
+  drawingContext.globalAlpha = 1 - fold * 0.85;
+
+  // 扉页内框
+  const frameA = Math.min(1, rise) * (1 - fold);
+  if (frameA > 0.01) {
+    noFill();
+    stroke(fa('#C79A52', 70 * frameA)); strokeWeight(2);
+    rect(-PAGE_W / 2 + 44, -PAGE_H / 2 + 44, PAGE_W - 88, PAGE_H - 88, 2);
+    stroke(fa('#C79A52', 46 * frameA)); strokeWeight(1);
+    rect(-PAGE_W / 2 + 54, -PAGE_H / 2 + 54, PAGE_W - 108, PAGE_H - 108, 2);
+    noStroke();
+    fill(fa('#C2574E', 90 * frameA));
+    const corners = [[-PAGE_W / 2 + 44, -PAGE_H / 2 + 44], [PAGE_W / 2 - 44, -PAGE_H / 2 + 44],
+                     [-PAGE_W / 2 + 44, PAGE_H / 2 - 44], [PAGE_W / 2 - 44, PAGE_H / 2 - 44]];
+    for (const c of corners) { push(); translate(c[0], c[1]); rotate(QUARTER_PI); rect(-4, -4, 8, 8, 1); pop(); }
+  }
+
+  const W = 720, H = 318;
+
+  // 下层衬纸
+  shOn(26, 12, 0.28);
+  noStroke(); fill('#E3C79C');
+  rect(-W / 2 - 16, -H / 2 - 10, W + 32, H + 26, 6);
+  shOff();
+
+  // 主卡：撕纸边
+  const r = mulberry32(97);
+  const pts = [];
+  const n = 14;
+  for (let i = 0; i <= n; i++) pts.push([-W / 2 + (W * i) / n, -H / 2 + (r() - 0.5) * 7]);
+  for (let i = n; i >= 0; i--) pts.push([-W / 2 + (W * i) / n, H / 2 + (r() - 0.5) * 7]);
+  shOn(20, 10, 0.24);
+  noStroke(); fill('#FBF3E2');
+  beginShape();
+  for (const p of pts) vertex(p[0], p[1]);
+  endShape(CLOSE);
+  shOff();
+
+  // 烫金细框
+  noFill(); stroke(fa('#C79A52', 190)); strokeWeight(2);
+  rect(-W / 2 + 18, -H / 2 + 18, W - 36, H - 36, 3);
+  stroke(fa('#C79A52', 90)); strokeWeight(1);
+  rect(-W / 2 + 26, -H / 2 + 26, W - 52, H - 52, 2);
+  noStroke();
+
+  // 顶部小字
+  fill(fa('#7C6555', 230));
+  textFont(FONT_H); textStyle(NORMAL); textAlign(CENTER, BASELINE);
+  textSize(19);
+  const sub = (tc && tc.subtitle) || '立 体 书 · 纸 艺 M V';
+  text(sub, 0, -H / 2 + 62);
+
+  // 歌名（自动缩放）
+  textFont(FONT_S); textStyle(BOLD);
+  let ts = 64;
+  textSize(ts);
+  while (textWidth(title) > W - 120 && ts > 30) { ts -= 2; textSize(ts); }
+  fill('#493A31');
+  text(title, 0, -H / 2 + 142);
+
+  // 分隔线 + 菱形
+  stroke(fa('#C2574E', 150)); strokeWeight(1.6);
+  line(-96, -H / 2 + 176, 96, -H / 2 + 176);
+  noStroke();
+  fill(fa('#C2574E', 170));
+  push(); translate(0, -H / 2 + 176); rotate(QUARTER_PI); rect(-4, -4, 8, 8, 1); pop();
+
+  // 演唱者
+  if (artist) {
+    textFont(FONT_H); textStyle(NORMAL); textSize(26);
+    fill(fa('#6A5446', 240));
+    text(`${artist} · 演唱`, 0, -H / 2 + 218);
+  }
+
+  // 红印章
+  const seal = (artist || title).slice(0, 1);
+  push();
+  translate(W / 2 - 62, H / 2 - 62); rotate(-0.07);
+  noFill(); stroke(fa('#CE463D', 210)); strokeWeight(3);
+  rect(-22, -22, 44, 44, 4);
+  fill(fa('#CE463D', 200)); noStroke();
+  textFont(FONT_S); textStyle(BOLD); textSize(20); textAlign(CENTER, CENTER);
+  text(seal, 0, 1);
+  pop();
+
+  // 立起来时的折痕阴影
+  if (k < 1) {
+    const ctx = drawingContext;
+    const g = ctx.createLinearGradient(0, H / 2 - 40, 0, H / 2 + 6);
+    g.addColorStop(0, 'rgba(120,92,60,0)');
+    g.addColorStop(1, `rgba(120,92,60,${0.3 * (1 - k)})`);
+    ctx.fillStyle = g;
+    ctx.fillRect(-W / 2, H / 2 - 40, W, 46);
+  }
+
+  textAlign(LEFT, BASELINE);
+  textStyle(NORMAL);
+  drawingContext.globalAlpha = 1;
+  pop();
 }
 
 /* 翻页转场 */

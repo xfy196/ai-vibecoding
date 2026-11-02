@@ -1,0 +1,17 @@
+{
+  "name": "paper-popup-mv",
+  "private": true,
+  "type": "module",
+  "version": "1.1.0",
+  "description": "立体书纸艺 MV 模板：p5.js 逐帧绘制 + puppeteer-core 无头 Chrome + ffmpeg 合成",
+  "scripts": {
+    "analyze": "node scripts/analyze.mjs",
+    "stills": "node scripts/render.mjs --stills",
+    "render": "node scripts/render.mjs",
+    "mux": "node scripts/mux.mjs"
+  },
+  "dependencies": {
+    "p5": "^1.11.3",
+    "puppeteer-core": "^24.10.0"
+  }
+}
